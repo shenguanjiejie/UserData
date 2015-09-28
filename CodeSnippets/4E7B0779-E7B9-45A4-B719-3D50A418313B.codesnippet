@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>localNotification</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+//取到所有通知
+NSArray *localNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+//创建设置通知
+    UILocalNotification *localNotification = [[UILocalNotification alloc]init];
+    localNotification.fireDate = pickerDate;
+    localNotification.alertBody = self.itemText.text;
+    localNotification.alertAction = @"Show me the item";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber]+1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+
+
+//AppDelegate
+if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+    [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
+}
+
+UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+if (locationNotification) {
+    application.applicationIconBadgeNumber = 0;
+}
+
+
+
+-(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIApplicationState state = [application applicationState];
+    
+    if (state == UIApplicationStateActive) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Reminder" message:notification.alertBody delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+    
+    application.applicationIconBadgeNumber = 0;
+    
+}
+
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4E7B0779-E7B9-45A4-B719-3D50A418313B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>初始化一个本地通知</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>localNotification</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

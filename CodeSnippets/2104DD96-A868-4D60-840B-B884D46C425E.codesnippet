@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>addConstraints-mine</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeExpression</string>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSDictionary *views = NSDictionaryOfVariableBindings(&lt;#...#&gt;);
+NSDictionary *metrics = @{@"&lt;#margin#&gt;":&lt;#value#&gt;};
+[&lt;#superview#&gt; addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[&lt;#views#&gt;]|" options:0 metrics:&lt;#metrics#&gt; views:views]];
+[&lt;#superview#&gt; addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[&lt;#views#&gt;]|" options:0 metrics:&lt;#metrics#&gt; views:views]];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2104DD96-A868-4D60-840B-B884D46C425E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>手动添加layout</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>addConstraints</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

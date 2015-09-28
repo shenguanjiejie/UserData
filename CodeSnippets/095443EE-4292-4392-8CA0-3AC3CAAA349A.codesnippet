@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>storyboardPush</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"&lt;#storyboardId#&gt;" bundle:nil];
+&lt;#targetController#&gt; *controller = [&lt;#targetController#&gt;instantiateViewControllerWithIdentifier:@"&lt;#storyboardId#&gt;"];
+    [self.navigationController pushViewController:controller animated:YES];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>095443EE-4292-4392-8CA0-3AC3CAAA349A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>在不同storyboard中的控制器之间的跳转</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>storyboardPush</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

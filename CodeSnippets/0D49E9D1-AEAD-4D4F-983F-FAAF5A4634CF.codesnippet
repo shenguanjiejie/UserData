@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import &lt;Availability.h&gt;
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;Foundation/Foundation.h&gt;
+#endif
+
+#ifndef Test___Prefix_pch
+#define Test___Prefix_pch
+
+/*********************************************************************************************************************/
+
+// 自定义Log
+#ifdef DEBUG // 调试
+#define MyLog(...) NSLog(__VA_ARGS__)
+#else // 发布打包
+#define MyLog(...)
+#endif
+
+// 全局统一背景
+#define kGlobal_BACKGROUNDCOLOR [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]
+//状态栏的高度
+#define kStatusBarHeight [UIApplication sharedApplication].bounds.size.height
+//导航栏高度
+#define NavigationBar_HEIGHT 44
+//屏幕的高度和宽度
+#define kScreen_Height [UIScreen mainScreen].bounds.size.height
+#define kScreen_Width [UIScreen mainScreen].bounds.size.width
+
+//实现单例
+// @interface
+#define singleton_interface(className) \
++ (className *)shared##className;
+
+// @implementation
+#define singleton_implementation(className) \
+static className *_instance; \
++ (id)allocWithZone:(NSZone *)zone \
+{ \
+static dispatch_once_t onceToken; \
+dispatch_once(&amp;onceToken, ^{ \
+_instance = [super allocWithZone:zone]; \
+}); \
+return _instance; \
+} \
++ (className *)shared##className \
+{ \
+static dispatch_once_t onceToken; \
+dispatch_once(&amp;onceToken, ^{ \
+_instance = [[self alloc] init]; \
+}); \
+return _instance; \
+}
+
+#define UIDeviceOrientationIsPortrait(orientation)  ((orientation) == UIDeviceOrientationPortrait || (orientation) == UIDeviceOrientationPortraitUpsideDown)
+#define UIDeviceOrientationIsLandscape(orientation) ((orientation) == UIDeviceOrientationLandscapeLeft || (orientation) == UIDeviceOrientationLandscapeRight)
+//上面是我的!!!****************************************************************************************
+
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define SAFE_RELEASE(x) [x release];x=nil
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion ([[UIDevice currentDevice] systemVersion])
+#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+
+#define BACKGROUND_COLOR [UIColor colorWithRed:242.0/255.0 green:236.0/255.0 blue:231.0/255.0 alpha:1.0]
+
+
+//use dlog to print while in debug model
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+
+#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+
+#if TARGET_OS_IPHONE
+//iPhone Device
+#endif
+
+#if TARGET_IPHONE_SIMULATOR
+//iPhone Simulator
+#endif
+
+
+//ARC
+#if __has_feature(objc_arc)
+//compiling with ARC
+#else
+// compiling without ARC
+#endif
+
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
+
+#pragma mark - common functions
+#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+
+#pragma mark - degrees/radian functions
+#define degreesToRadian(x) (M_PI * (x) / 180.0)
+#define radianToDegrees(radian) (radian*180.0)/(M_PI)
+
+#pragma mark - color functions
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define ITTDEBUG
+#define ITTLOGLEVEL_INFO     10
+#define ITTLOGLEVEL_WARNING  3
+#define ITTLOGLEVEL_ERROR    1
+
+#ifndef ITTMAXLOGLEVEL
+
+#ifdef DEBUG
+#define ITTMAXLOGLEVEL ITTLOGLEVEL_INFO
+#else
+#define ITTMAXLOGLEVEL ITTLOGLEVEL_ERROR
+#endif
+
+#endif
+
+// The general purpose logger. This ignores logging levels.
+#ifdef ITTDEBUG
+#define ITTDPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define ITTDPRINT(xx, ...)  ((void)0)
+#endif
+
+// Prints the current method's name.
+#define ITTDPRINTMETHODNAME() ITTDPRINT(@"%s", __PRETTY_FUNCTION__)
+
+// Log-level based logging macros.
+#if ITTLOGLEVEL_ERROR &lt;= ITTMAXLOGLEVEL
+#define ITTDERROR(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDERROR(xx, ...)  ((void)0)
+#endif
+
+#if ITTLOGLEVEL_WARNING &lt;= ITTMAXLOGLEVEL
+#define ITTDWARNING(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDWARNING(xx, ...)  ((void)0)
+#endif
+
+#if ITTLOGLEVEL_INFO &lt;= ITTMAXLOGLEVEL
+#define ITTDINFO(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDINFO(xx, ...)  ((void)0)
+#endif
+
+#ifdef ITTDEBUG
+#define ITTDCONDITIONLOG(condition, xx, ...) { if ((condition)) { \
+ITTDPRINT(xx, ##__VA_ARGS__); \
+} \
+} ((void)0)
+#else
+#define ITTDCONDITIONLOG(condition, xx, ...) ((void)0)
+#endif
+
+#define ITTAssert(condition, ...)                                       \
+do {                                                                      \
+if (!(condition)) {                                                     \
+[[NSAssertionHandler currentHandler]                                  \
+handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
+file:[NSString stringWithUTF8String:__FILE__]  \
+lineNumber:__LINE__                                  \
+description:__VA_ARGS__];                             \
+}                                                                       \
+} while(0)
+
+//#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:file ofType:ext]]
+//读取本地图片的 和imageNamed一样，但是性能比后者要强很多，两个参数，前面一个是 文件名，后面一个是类型
+//例如 imageView.image =  LOADIMAGE(@"文件名",@"png");
+//在资源不吃紧的情况下,这种反而是个累赘,因为没有缓存.
+//imagenamed只是说要缓存,而且无法手动清空而已.缓存是好是坏,只能自己判定.
+
+#define   WIDTH   [[UIScreen mainScreen] bounds].size.width
+#define  HEIGHT  [[UIScreen mainScreen] bounds].size.height
+
+#define VIEWWITHTAG(_OBJECT, _TAG)    [_OBJECT viewWithTag : _TAG]
+
+//这样就不需要填默认的参数了. 对于需要反复使用的方法比较方便。
+//比如说MyLocal(@"0094")  代替了NSLocalizedString(@"0094", nil)
+#define MyLocal(x, ...) NSLocalizedString(x, nil)
+
+// rgb颜色转换（16进制-&gt;10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 green:((float)((rgbValue &amp; 0xFF00) &gt;&gt; 8))/255.0 blue:((float)(rgbValue &amp; 0xFF))/255.0 alpha:1.0]
+
+
+//检查系统版本
+//我也来一个我用过的，检查系统版本的
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+//清除背景色
+#define CLEARCOLOR [UIColor clearColor]
+
+//定义UIImage对象
+#define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
+
+//带有RGBA的颜色设置
+#define COLOR(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+//方正黑体简体字体定义
+#define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
+
+//安全删除对象
+#define SAFE_DELETE(P) if(P) { [P release], P = nil; }
+
+//接口API
+#define APIURL                @"http://xxxxx/"
+//登录
+#define APILogin              [APIURL stringByAppendingString:@"Login"]        //登录API
+
+
+// 获取RGB颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+#endif
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0D49E9D1-AEAD-4D4F-983F-FAAF5A4634CF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Prefix.pch基本配置</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Prefix.pch</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

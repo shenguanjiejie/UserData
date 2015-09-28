@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pushController</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"&lt;#identity#&gt;" bundle:nil];
+&lt;#childViewController#&gt; *childController = [storyboard instantiateViewControllerWithIdentifier:@"&lt;#identity#&gt;"];
+        [self.navigationController pushViewController:childController animated:YES];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>814EBBEC-A738-4B91-BB13-3419221B9DC1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>push controller  by storyboard</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>push controller </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

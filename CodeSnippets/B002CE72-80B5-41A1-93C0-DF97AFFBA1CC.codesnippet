@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ImagePickerWithSheet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)changeIcon{
+    NSLog(@"changeIcon...");
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:nil
+                                                                                                delegate:self
+                                                                                                cancelButtonTitle:@"取消"
+                                                                                                destructiveButtonTitle:nil
+                                                                                                otherButtonTitles: @"从相册选择", @"拍照",
+                                                        nil];
+    actionSheet.tag = 255;
+    [actionSheet showInView:self.view];
+}
+
+#pragma mark - actionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (actionSheet.tag == 255) {
+        NSUInteger sourceType = 0;
+        //检测设备是否支持照相机,如果不支持sourceType直接赋值为UIImagePickerControllerSourceTypePhotoLibrary
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            switch (buttonIndex) {
+                case 0:
+                    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                    break;
+                case 1:
+                    sourceType = UIImagePickerControllerSourceTypeCamera;
+                    break;
+                case 2:
+                    return;
+                    break;
+                default:
+                    break;
+            }
+        }else{
+            if (buttonIndex == 2) return;
+            sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+        
+        [self startIndicatorWithMessage:@"Loading picker..." andCancelCallBack:nil];
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            picker.sourceType = sourceType;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:picker animated:YES completion:nil];
+                [self stopIndicator];
+            });
+        });
+    }
+}
+
+#pragma mark - imagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    _iconImgView.image = [UIImage circleIconWithImage:image diameter:30] ;
+
+    //以下代码用来保存头像到本地
+//    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+//    NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:@"currentIamge.png"];
+//    [imageData writeToFile:path atomically:YES];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B002CE72-80B5-41A1-93C0-DF97AFFBA1CC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ImagePickerWithSheet</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ImagePickerWithSheet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

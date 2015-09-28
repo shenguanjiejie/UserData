@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>gradientColor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 绘制颜色渐变
+    // 创建色彩空间对象
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGColorRef upColor = startColor.CGColor;
+    CGColorRef downColor = endColor.CGColor;
+    // 创建颜色数组
+    CFArrayRef colorArray = CFArrayCreate(kCFAllocatorDefault, (const void*[]){upColor, downColor}, 2, nil);
+    // 创建渐变对象
+    CGGradientRef gradientRef = CGGradientCreateWithColors(colorSpaceRef, colorArray, (CGFloat[]){
+        0.0f,	   // 对应起点颜色位置
+        1.0f		// 对应终点颜色位置
+    });
+    // 释放颜色数组
+    CFRelease(colorArray);
+    // 释放色彩空间
+    CGColorSpaceRelease(colorSpaceRef);
+    CGContextDrawLinearGradient(ctx, gradientRef, CGPointZero, CGPointMake(0, height), 0);
+    // 释放渐变对象
+    CGGradientRelease(gradientRef);</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>058C3913-48CF-4321-B111-C81DCD5CA8AB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>GradientColor</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>GradientColor-渐变色</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

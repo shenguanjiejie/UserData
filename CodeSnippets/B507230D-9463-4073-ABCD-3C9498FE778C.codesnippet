@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BarButtonItem</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIBarButtonItem *&lt;#backBarButtonItem#&gt; = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:&lt;#imageName#&gt;] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+UIBarButtonItem *&lt;#name#&gt; = [[UIBarButtonItem alloc] initWithTitle:@"&lt;#title#&gt;" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+self.navigationItem.leftBarButtonItems = [[NSArray alloc] initWithObjects:&lt;#backBarButtonItem#&gt;, &lt;#name#&gt;, nil];
+    
+UIBarButtonItem *&lt;#name#&gt; = [[UIBarButtonItem alloc] initWithTitle:@"&lt;#title#&gt;" style:UIBarButtonItemStylePlain target:self action:@selector(&lt;#selectorName#&gt;)];
+self.navigationItem.rightBarButtonItem = &lt;#name#&gt;;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B507230D-9463-4073-ABCD-3C9498FE778C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>add BarButtonItem</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BarButtonItem</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

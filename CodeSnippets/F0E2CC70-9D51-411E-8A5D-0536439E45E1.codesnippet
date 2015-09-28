@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Unarchiver</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSMutableArray *)findAll{
+    NSMutableArray *array = [NSMutableArray array];
+    NSData *data = [NSData dataWithContentsOfFile:&lt;#filePath#&gt;];
+    
+    if (data.length &gt; 0) {
+        NSKeyedUnarchiver *archiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        //编码
+        array = [archiver decodeObjectForKey:@"&lt;#sleepList#&gt;"];
+        //结束编码
+        [archiver finishDecoding];
+    }
+    
+    return array;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F0E2CC70-9D51-411E-8A5D-0536439E45E1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Unarchiver 解档数据获得数组</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Unarchiver findAll</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

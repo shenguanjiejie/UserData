@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>archiver</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#define fileName @"records.data"
+#define filePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:fileName]
+
+- (void)addModel:(&lt;#model#&gt; *)model{
+    NSMutableArray *array = [self findAll];
+    [array addObject:model];
+    [self archiveArray:array];
+}
+
+
+- (void)archiveArray:(NSArray *)array{
+    NSMutableData *data = [[NSMutableData alloc] init];
+    //创建归档辅助类
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    //编码
+    [archiver encodeObject:array forKey:@"&lt;#key#&gt;"];
+    //结束编码
+    [archiver finishEncoding];
+    //写入
+    [data writeToFile:&lt;#filePath#&gt; atomically:YES];
+}
+
+- (NSMutableArray *)findAll{
+    NSMutableArray *array = [NSMutableArray array];
+    NSData *data = [NSData dataWithContentsOfFile:&lt;#filePath#&gt;];
+    
+    if (data.length &gt; 0) {
+        NSKeyedUnarchiver *archiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+        //编码
+        array = [archiver decodeObjectForKey:@"&lt;#sleepList#&gt;"];
+        //结束编码
+        [archiver finishDecoding];
+    }
+    
+    return array;
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>85F126E7-3FAA-4A3B-83E6-123359043A04</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>归档数据</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>archiver encode</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>screenSize</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static CGSize appScreenSize;
+static UIInterfaceOrientation lastOrientation;
+
++(CGSize) screenSize{
+    UIInterfaceOrientation orientation =[UIApplication sharedApplication].statusBarOrientation;
+    if(appScreenSize.width==0 || lastOrientation != orientation){
+        appScreenSize = CGSizeMake(0, 0);
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size; // 这里如果去掉状态栏，只要用applicationFrame即可。
+        if(orientation == UIDeviceOrientationLandscapeLeft ||orientation == UIDeviceOrientationLandscapeRight){
+            // 横屏，那么，返回的宽度就应该是系统给的高度。注意这里，全屏应用和非全屏应用，应该注意自己增减状态栏的高度。
+            appScreenSize.width = screenSize.height;
+            appScreenSize.height = screenSize.width;
+        }else{
+            appScreenSize.width = screenSize.width;
+            appScreenSize.height = screenSize.height;
+        }
+        lastOrientation = orientation;
+    }
+    return appScreenSize;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>02DAA2AF-DBDD-4F42-9273-F494466D685E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>无论横屏竖屏,都能获取屏幕尺寸</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ScreenSize</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

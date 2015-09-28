@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mySuperView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UITableViewCell *cell = [[UITableViewCell alloc]init];
+for (UIView* next = button.superview; next; next = next.superview) {
+            UIResponder *nextResponder = [next nextResponder];
+            if ([nextResponder isKindOfClass:[UITableViewCell class]]) {        
+                &lt;#variate#&gt; = (&lt;#className#&gt; *)nextResponder;
+            }
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FF57BB5B-4682-49C8-9250-5B311CD6A52D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>遍历superview</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>superView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

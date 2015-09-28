@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>drawImage</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 开启上下文
+UIGraphicsBeginImageContextWithOptions(&lt;#size#&gt;, NO, 0.0);
+    
+    // 取得当前的上下文
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+[[UIColor &lt;#blueColor#&gt;] set];
+CGContextMoveToPoint(ctx, &lt;#x#&gt;, &lt;#y#&gt;);
+    CGContextAddLineToPoint(ctx,&lt;#x#&gt;, &lt;#y#&gt;);
+//CGContextAddArc(ctx,&lt;#x#&gt;, &lt;#y#&gt;,&lt;#radius#&gt;,&lt;#startAngle#&gt;,&lt;#endAngle#&gt;,0);
+    CGContextSetLineCap(ctx, kCGLineCapRound);
+    CGContextStrokePath(ctx);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 结束上下文
+    UIGraphicsEndImageContext();
+
+    return image;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>689DBC57-8506-4333-B5E5-CFFCAA185388</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>drawImage</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>位图上下文</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

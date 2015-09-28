@@ -1,2 +1,3 @@
-# UserData
-UserData 目录 ~/Library/Developer/Xcode/UserData/
+# XCode_UserData
+XCode_UserData Shared
+ ~/Library/Developer/Xcode/UserData/

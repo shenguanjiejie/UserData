@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MySearchBox</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIView *)searchView{
+    UIView *searchView = [[UIView alloc]init];
+    searchView.translatesAutoresizingMaskIntoConstraints = NO;
+    searchView.backgroundColor = [UIColor lightGrayColor];
+    
+    //放大镜图标
+    UIImageView *searchIcon = [[UIImageView alloc]init];
+    searchIcon.translatesAutoresizingMaskIntoConstraints = NO;
+    searchIcon.image = [UIImage imageNamed:@"icn_nav_search"];
+    searchIcon.contentMode = UIViewContentModeCenter;
+    
+    //输入框
+    UITextField *searchBox = [[UITextField alloc]init];
+    searchBox.clearButtonMode = UITextFieldViewModeWhileEditing;
+    searchBox.placeholder = @"&lt;#text#&gt;";
+    [searchBox setValue:&lt;#UIColor#&gt; forKeyPath:@"_placeholderLabel.textColor"];
+    searchBox.textColor = &lt;#UIColor#&gt;;
+    searchBox.delegate = self;
+    searchBox.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [searchView addSubview:searchIcon];
+    [searchView addSubview:searchBox];
+    
+    //layout
+    NSDictionary *views = NSDictionaryOfVariableBindings(searchIcon,searchBox);
+    NSDictionary *metrics = @{@"searchIconW":@44};
+    
+    [searchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[searchIcon]|" options:0 metrics:metrics views:views]];
+    [searchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[searchBox]|" options:0 metrics:metrics views:views]];
+    [searchView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[searchIcon(searchIconW)]-[searchBox]|" options:0 metrics:metrics views:views]];
+    
+    return searchView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E9FD4451-9B99-41DE-9087-65AB59DC31E3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>用textField改装定制的SearchBox (View)</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MySearchBox</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

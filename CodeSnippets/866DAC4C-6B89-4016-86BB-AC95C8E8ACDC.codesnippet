@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Query String</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF&lt;#.key#&gt; CONTAINS[cd] %@",&lt;#string#&gt;];
+    &lt;#Array#&gt; = [NSArray arrayWithArray:[&lt;#SelfArray#&gt; filteredArrayUsingPredicate:predicate]];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>866DAC4C-6B89-4016-86BB-AC95C8E8ACDC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>模糊查询</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Query string</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

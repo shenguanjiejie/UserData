@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BackBarButtonItem</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIBarButtonItem *) createBackBarButtonItem:(NSString *)title target:(id)target action:(SEL)action
+{
+    UIButton* customButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [customButton setImage:[UIImage imageNamed:@"icn_nav_back.png"] forState:UIControlStateNormal];
+    [customButton setTitle:title forState:UIControlStateNormal];
+    [customButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [customButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    customButton.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+    [customButton sizeToFit];
+    
+    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithCustomView:customButton];
+    return backButton;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>361C8D26-13B6-4B44-8640-1B1ED429B989</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>自定义BarButtonItem返回按钮,图片+文字</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BackBarButtonItem</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

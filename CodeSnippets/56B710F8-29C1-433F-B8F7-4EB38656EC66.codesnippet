@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>touchesBegan</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSSet *set = [event touchesForView:self.currentPickerView];
+
+    if ([touches isEqualToSet:set]) {
+        // 1.取得触摸点
+        UITouch *touch = [touches anyObject];
+        CGPoint point =  [touch locationInView:self.currentPickerView];
+        if (CGRectContainsPoint(&lt;#frame#&gt;, point)) {
+            
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>56B710F8-29C1-433F-B8F7-4EB38656EC66</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>touchesBegan常用方法</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>touchesBegan常用方法</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

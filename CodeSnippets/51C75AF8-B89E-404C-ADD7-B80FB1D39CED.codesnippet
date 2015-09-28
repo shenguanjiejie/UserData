@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>post notification with userinfo</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>[[NSNotificationCenter defaultCenter] postNotificationName:NSLocalizedString(@"&lt;#Message#&gt;", nil) object:nil userInfo:@{@"&lt;#key#&gt;":&lt;#value#&gt;}];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>51C75AF8-B89E-404C-ADD7-B80FB1D39CED</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>发出一个带有参数字典的通知</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>post notification with userinfo</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

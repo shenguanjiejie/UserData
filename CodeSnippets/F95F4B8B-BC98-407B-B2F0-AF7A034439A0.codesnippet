@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>myDateFormatter</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSDateFormatter *) MyDateFormatter{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息。
+    NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];
+    NSArray* languages = [defs objectForKey:@"AppleLanguages"];
+    NSString* preferredLang = languages.firstObject;
+    if ([preferredLang isEqualToString:@"zh-Hans"]) {
+        [dateFormatter setDateFormat:@"yyyy年MM月dd日 HH:mm"];
+    }else{
+        [dateFormatter setDateFormat:@"MM/dd/YYYY HH:mm"];
+    }
+    
+    return dateFormatter;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F95F4B8B-BC98-407B-B2F0-AF7A034439A0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>定义日期的字符串格式</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>myDateFormatter</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

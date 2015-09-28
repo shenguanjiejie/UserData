@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MyTextField</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    [_searchResult removeAllObjects];
+    
+    _addContactView.hidden = YES;
+    _tableView.hidden = NO;
+    NSString *text = textField.text;
+    if ([string isEqualToString:@"\n"]) {
+        [textField resignFirstResponder];
+    }else{
+        text = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    }
+    if ([text isEqualToString:@""]){
+        _addContactView.hidden = NO;
+        _tableView.hidden = YES;
+    }else{
+        for (NSString *str in _contracts) {
+            if ([str rangeOfString:text].location != NSNotFound){
+                [_searchResult addObject:str];
+            }
+        }
+        if (_searchResult.count) {
+            _headerLabel.text = [NSString stringWithFormat:@"%@%d%@",NSLocalizedString(@"共搜索到", nil),(int)_searchResult.count,NSLocalizedString(@"位用户", nil)];
+        }else{
+            if ([self isValidateEmail:text]) {
+                _headerLabel.text = NSLocalizedString(@"该邮箱还未注册,快发送邮件邀请小伙伴一起加入吧~", nil);
+                [_searchResult addObject:text];
+            }else{
+                _headerLabel.text = NSLocalizedString(@"未找到", nil);
+            }
+        }
+        
+        [_tableView reloadData];
+    }
+    return YES;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B3E65D28-29D7-4B62-A162-7BB0ED6DFFE8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>动态加载想要查找的联系人或者其他-如:输入a后就出现名字包含a的联系人</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>MyTextField:shouldChangeCharactersInRange:replacementString:</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

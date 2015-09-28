@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>stopEditing gestureRecognizer</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc]
+                                                 initWithTarget:self action:@selector(stopEditing)];
+    [gestureRecognizer setCancelsTouchesInView:NO];
+    [self.view addGestureRecognizer:gestureRecognizer];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F391120A-83C2-41E6-AD53-0558B4334330</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>stopEditing,也可解决cell点击不到的问题</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>stopEditing,也可解决cell点击不到的问题</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
