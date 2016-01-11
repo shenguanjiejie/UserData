@@ -21,7 +21,7 @@ for (UIView* next = button.superview; next; next = next.superview) {
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>遍历superview</string>
+	<string>遍历superview cell</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>superView</string>
 	<key>IDECodeSnippetUserSnippet</key>

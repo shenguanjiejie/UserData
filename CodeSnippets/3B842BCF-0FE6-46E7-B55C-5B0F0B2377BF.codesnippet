@@ -9,7 +9,8 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(&lt;#selector#&gt;) name:NSLocalizedString(@"&lt;#Message#&gt;", nil) object:nil];</string>
+	<string>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(&lt;#selector#&gt;) name:&lt;#Message#&gt; object:nil];
+[[NSNotificationCenter defaultCenter] removeObserver:self];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>3B842BCF-0FE6-46E7-B55C-5B0F0B2377BF</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sortDescriptor</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"&lt;#propertyKey#&gt;" ascending:YES];
+    [&lt;#Array#&gt; sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4256E724-ACB9-454D-ADE3-B55B56C3B2A5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>NSSortDescriptor</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>数组排序</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

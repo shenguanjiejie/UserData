@@ -27,13 +27,14 @@
 
 // 自定义Log
 #ifdef DEBUG // 调试
-#define MyLog(...) NSLog(__VA_ARGS__)
+#define DNSLog(...) NSLog(__VA_ARGS__)
 #else // 发布打包
-#define MyLog(...)
+#define DNSLog(...)
 #endif
 
 // 全局统一背景
 #define kGlobal_BACKGROUNDCOLOR [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]
+#define rgbColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 green:((float)((rgbValue &amp; 0xFF00) &gt;&gt; 8))/255.0 blue:((float)(rgbValue &amp; 0xFF))/255.0 alpha:1.0]
 //状态栏的高度
 #define kStatusBarHeight [UIApplication sharedApplication].bounds.size.height
 //导航栏高度

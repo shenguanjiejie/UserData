@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>classMarks</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - Life Cycle
+
+-(void)variableInit{
+    &lt;#code#&gt;
+}
+
+#pragma mark |----setViews
+
+#pragma mark - Event Response
+
+#pragma mark - Private Methods
+
+#pragma mark |----&lt;#category#&gt;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4CABE3E9-83DA-4ED9-B5D3-91F9A80A9BE8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>类的编码规范</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>classMarks</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

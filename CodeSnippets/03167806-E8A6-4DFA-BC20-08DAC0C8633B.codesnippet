@@ -26,7 +26,7 @@
     static NSString * CellIdentifier = @"GradientCell";
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     if(cell == nil){
-        cell = [[collectionView alloc]init];
+        cell = [[UICollectionViewCell alloc]init];
     }
     
     return cell;

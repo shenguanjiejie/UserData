@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>try</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@try {
+            @autoreleasepool {
+                return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+            }
+        }@catch (NSException* exception){
+            DNSLog(@"!!!捕获到了异常!!!:Exception=%@\nStack Trace:%@", exception, [exception callStackSymbols]);
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>924F923C-6175-481A-975A-FBB682E7347E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>全局try catch</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>try catch</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
