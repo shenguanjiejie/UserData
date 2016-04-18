@@ -15,13 +15,13 @@
     &lt;#code#&gt;
 }
 
-#pragma mark |----setViews
+#pragma mark ----setViews
 
 #pragma mark - Event Response
 
 #pragma mark - Private Methods
 
-#pragma mark |----&lt;#category#&gt;</string>
+#pragma mark ----&lt;#category#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4CABE3E9-83DA-4ED9-B5D3-91F9A80A9BE8</string>
 	<key>IDECodeSnippetLanguage</key>

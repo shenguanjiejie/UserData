@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>
-#pragma mark - tableViewDelegate &amp; tableViewDataSource
+#pragma mark - UITableViewDelegate &amp; tableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }

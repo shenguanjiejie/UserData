@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>syncNetworkRequest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 1.将网址初始化成一个OC字符串对象
+    NSString *urlStr = @"http://192.168.0.215:8088/applist.php?action=GetAllApps";
+    // 如果网址中存在中文,进行URLEncode
+    NSString *newUrlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    // 2.构建网络URL对象, NSURL
+    NSURL *url = [NSURL URLWithString:newUrlStr];
+    // 3.创建网络请求
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
+    
+    // 创建同步链接
+    request.URL = url;
+    request.HTTPMethod = @"POST";
+    
+    // 拼接请求参数
+    NSString *params = [NSString stringWithFormat:@"usrname=%@&amp;password=%@",self.currentAccount.username,self.currentAccount.password];
+    // 对字符串进行编码后转成NSData对象
+    NSData *data = [params dataUsingEncoding:NSUTF8StringEncoding];
+    // 设置请求体
+    request.HTTPBody = data;
+    
+    // 设置请求头信息-请求体长度
+    NSString *contentLength = [NSString stringWithFormat:@"%lu", (unsigned long)data.length];
+    [request setValue:contentLength forHTTPHeaderField:@"Content-Length"];
+    // 设置请求头信息-请求数据类型
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSString *json = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        DDLogInfo(@"%@----applications json = %@\n",THIS_METHOD,json);
+        
+        NSDictionary *dict = [json mj_JSONObject];
+        NSArray *appArray = [dict[@"applist"] mj_JSONObject];
+        
+        _apps = [Application mj_objectArrayWithKeyValuesArray:appArray];
+        for (Application *app in _apps) {
+//            NSString *path = [app.appIconUrl substringWithRange:NSMakeRange(1, app.appIconUrl.length - 1)];
+            NSString *urlStr = [NSString stringWithFormat:@"http://%@:%@%@",self.currentAccount.serverIp,self.currentAccount.webPort,app.appIconUrl];
+            app.icon = [[NSImage alloc]initWithContentsOfURL:[NSURL URLWithString:urlStr]];
+        }
+        [self performSelectorOnMainThread:@selector(updateUI) withObject:nil waitUntilDone:NO];
+    }];
+    
+    [task resume];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>70326EB6-CDD0-4107-93D8-19BCA8357598</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>原生请求</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>同步网络请求</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

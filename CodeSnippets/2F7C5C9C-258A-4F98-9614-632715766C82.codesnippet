@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>letterOfString</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSString*)firstLetterOfString:(NSString*)chinese
+{
+    CFMutableStringRef string = CFStringCreateMutableCopy(NULL, 0, (__bridge CFMutableStringRef)[NSMutableString stringWithString:chinese]);
+    CFStringTransform(string, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform(string, NULL, kCFStringTransformStripDiacritics, NO);
+    
+    NSMutableString *aNSString = (__bridge NSMutableString *)string;
+    NSString *finalString = [aNSString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%c", 32] withString:@""];
+    
+    NSString *firstLetter = [[finalString substringToIndex:1]uppercaseString];
+    if (!firstLetter||firstLetter.length&lt;=0) {
+        firstLetter = @"#";
+    }else{
+        unichar letter = [firstLetter characterAtIndex:0];
+        if (letter&lt;65||letter&gt;90) {
+            firstLetter = @"#";
+        }
+    }
+    return firstLetter;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2F7C5C9C-258A-4F98-9614-632715766C82</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>FirstLetterOfString:</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取字符串首字母</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
