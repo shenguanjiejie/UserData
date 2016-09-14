@@ -3,25 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strong</string>
+	<string>predicate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceVariables</string>
-		<string>Preprocessor</string>
-		<string>TopLevel</string>
-		<string>ClassInterfaceMethods</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;
-</string>
+	<string>NSPredicate *predicate = [NSPredicate predicateWithFormat:@"selected == %d",YES];
+    &lt;#Array#&gt; = [&lt;#checkArray#&gt; filteredArrayUsingPredicate:predicate];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>963F7D6B-9485-418F-A496-17E2410D58D6</string>
+	<string>E6224189-4EAA-42FC-968F-0D9EBC1D8769</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>property-strong</string>
+	<string>predicate</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property strong</string>
+	<string>查找数组中符合条件的item,返回数组</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

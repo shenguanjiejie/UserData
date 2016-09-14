@@ -3,25 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strong</string>
+	<string>delete@""</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceVariables</string>
-		<string>Preprocessor</string>
-		<string>TopLevel</string>
-		<string>ClassInterfaceMethods</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;
-</string>
+	<string>[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>963F7D6B-9485-418F-A496-17E2410D58D6</string>
+	<string>37513A07-68EB-4BC8-BD0A-809C05C6613B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>property-strong</string>
+	<string>delete""</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property strong</string>
+	<string>去掉字符串两端空格和中间换行</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

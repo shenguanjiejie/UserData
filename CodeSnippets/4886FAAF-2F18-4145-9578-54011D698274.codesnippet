@@ -22,7 +22,7 @@ _collectionView.showsVerticalScrollIndicator = NO;
 [_collectionView registerClass:[RJPageCell class] forCellWithReuseIdentifier:@"Cell"];
 _collectionView.delegate = self;
 _collectionView.dataSource = self;
-[self.view addSubView:_collectionView];
+[self.view addSubview:_collectionView];
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4886FAAF-2F18-4145-9578-54011D698274</string>

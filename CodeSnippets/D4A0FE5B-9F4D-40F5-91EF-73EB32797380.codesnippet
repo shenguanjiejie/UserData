@@ -3,25 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strong</string>
+	<string>lineView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceVariables</string>
-		<string>Preprocessor</string>
-		<string>TopLevel</string>
-		<string>ClassInterfaceMethods</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;
-</string>
+	<string>UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, &lt;#titleView#&gt;.height - 1, &lt;#titleView#&gt;.width, 1)];
+lineView.backgroundColor = kSeparatorColor;
+[&lt;#titleView#&gt; addSubview:lineView];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>963F7D6B-9485-418F-A496-17E2410D58D6</string>
+	<string>D4A0FE5B-9F4D-40F5-91EF-73EB32797380</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>property-strong</string>
+	<string>在底部加一条线</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property strong</string>
+	<string>lineView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

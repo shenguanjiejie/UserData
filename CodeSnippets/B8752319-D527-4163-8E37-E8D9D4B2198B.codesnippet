@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>internetIsOK</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark  网络判断
+-(BOOL)requestBeforeJudgeConnect
+{
+    struct sockaddr zeroAddress;
+    bzero(&amp;zeroAddress, sizeof(zeroAddress));
+    zeroAddress.sa_len = sizeof(zeroAddress);
+    zeroAddress.sa_family = AF_INET;
+    SCNetworkReachabilityRef defaultRouteReachability =
+    SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&amp;zeroAddress);
+    SCNetworkReachabilityFlags flags;
+    BOOL didRetrieveFlags =
+    SCNetworkReachabilityGetFlags(defaultRouteReachability, &amp;flags);
+    CFRelease(defaultRouteReachability);
+    if (!didRetrieveFlags) {
+        printf("Error. Count not recover network reachability flags\n");
+        return NO;
+    }
+    BOOL isReachable = flags &amp; kSCNetworkFlagsReachable;
+    BOOL needsConnection = flags &amp; kSCNetworkFlagsConnectionRequired;
+    BOOL isNetworkEnable  =(isReachable &amp;&amp; !needsConnection) ? YES : NO;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible =isNetworkEnable;/*  网络指示器的状态： 有网络 ： 开  没有网络： 关  */
+    });
+    return isNetworkEnable;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B8752319-D527-4163-8E37-E8D9D4B2198B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>internetIsOK</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>检查网络状态</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
