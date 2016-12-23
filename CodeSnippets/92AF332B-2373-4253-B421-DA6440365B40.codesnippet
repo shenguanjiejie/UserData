@@ -9,7 +9,8 @@
 		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[NSSearchPathForDirectoriesInDomains(&lt;#NSCachesDirectory#&gt;, NSUserDomainMask, YES) firstObject]</string>
+	<string>NSString *basePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) firstObject];
+basePath = [basePath stringByAppendingPathComponent:@"&lt;#FileCacheBenchmarkLarge#&gt;"];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>92AF332B-2373-4253-B421-DA6440365B40</string>
 	<key>IDECodeSnippetLanguage</key>

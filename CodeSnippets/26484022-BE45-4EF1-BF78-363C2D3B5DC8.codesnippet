@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>network_Request</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSDictionary *params = @{
+                             @"&lt;##&gt;":&lt;##&gt;,
+                             @"&lt;##&gt;":&lt;##&gt;
+                             };
+    
+    NSString *url = &lt;##&gt;;
+    DDLog(@"%s %@---%@",__FUNCTION__,url,params);
+    
+    [HttpTool &lt;#post#&gt;WithURL:url params:params success:^(id json) {
+        DDLog(@"%s %@",__FUNCTION__,json);
+        
+    } failure:^(NSError *error) {
+        
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>26484022-BE45-4EF1-BF78-363C2D3B5DC8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>网络请求套餐</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Network Request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

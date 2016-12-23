@@ -9,7 +9,9 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIView *&lt;#name#&gt; = [[UIView alloc]init];</string>
+	<string>UIView *&lt;#name#&gt; = [[UIView alloc]init];
+&lt;#name#&gt;.backgroundColor = &lt;##&gt;;
+[&lt;##&gt; addSubview:&lt;#name#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7F9666C7-BDB3-4C84-A343-CE4923BA12AF</string>
 	<key>IDECodeSnippetLanguage</key>

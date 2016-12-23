@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, &lt;#titleView#&gt;.height - 1, &lt;#titleView#&gt;.width, 1)];
+	<string>UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, &lt;#titleView#&gt;.height - 0.5, &lt;#titleView#&gt;.width, 0.5)];
 lineView.backgroundColor = kSeparatorColor;
 [&lt;#titleView#&gt; addSubview:lineView];</string>
 	<key>IDECodeSnippetIdentifier</key>

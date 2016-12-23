@@ -9,7 +9,7 @@
 		<string>CodeExpression</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>alloc]init</string>
+	<string>alloc] init</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>955BB959-B613-40BE-B2B3-A314EA9E12BC</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>alloc简写</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>alloc]init</string>
+	<string>alloc] init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

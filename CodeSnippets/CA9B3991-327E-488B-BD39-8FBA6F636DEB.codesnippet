@@ -9,7 +9,9 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIImageView *&lt;#name#&gt; = [[UIImageView alloc]init];</string>
+	<string>UIImageView *&lt;#name#&gt; = [[UIImageView alloc]init];
+&lt;#name#&gt;.contentMode = UIViewContentModeScaleAspectFit;
+[&lt;##&gt; addSubview:&lt;#name#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CA9B3991-327E-488B-BD39-8FBA6F636DEB</string>
 	<key>IDECodeSnippetLanguage</key>

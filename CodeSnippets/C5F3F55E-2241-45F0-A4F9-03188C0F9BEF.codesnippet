@@ -9,7 +9,12 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UILabel *&lt;#name#&gt; = [[UILabel alloc]init];</string>
+	<string>UILabel *&lt;#name#&gt; = [[UILabel alloc]init];
+&lt;#titleLab#&gt;.font = [UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];
+&lt;#titleLab#&gt;.textColor = &lt;##&gt;;
+&lt;#titleLab#&gt;.textAlignment = NSTextAlignmentCenter;
+&lt;#titleLab#&gt;.text = &lt;##&gt;;
+[&lt;##&gt; addSubview:&lt;#titleLab#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C5F3F55E-2241-45F0-A4F9-03188C0F9BEF</string>
 	<key>IDECodeSnippetLanguage</key>

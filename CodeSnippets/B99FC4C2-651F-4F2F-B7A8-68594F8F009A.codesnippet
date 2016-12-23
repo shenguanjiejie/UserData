@@ -9,7 +9,13 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIButton *&lt;#name#&gt; = [[UIButton alloc]init];</string>
+	<string>UIButton *&lt;#name#&gt; = [[UIButton alloc]init];
+&lt;#name#&gt;.backgroundColor = &lt;##&gt;;
+&lt;#name#&gt;.titleLabel.font = [UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];
+[&lt;#name#&gt; setTitle:&lt;#(nullable NSString *)#&gt; forState:UIControlStateNormal];
+[&lt;#name#&gt; setTitleColor:&lt;#(nullable UIColor *)#&gt; forState:UIControlStateNormal];
+[&lt;#name#&gt; addTarget:self action:@selector(&lt;#selector#&gt;) forControlEvents:UIControlEventTouchUpInside];
+[&lt;##&gt; addSubview:&lt;#name#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B99FC4C2-651F-4F2F-B7A8-68594F8F009A</string>
 	<key>IDECodeSnippetLanguage</key>

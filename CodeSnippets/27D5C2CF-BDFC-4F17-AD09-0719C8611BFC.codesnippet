@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>bannerViewInit</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>RJBannerView *bannerView = [[RJBannerView alloc] initWithFrame:CGRectMake(0, 0, &lt;##&gt;, &lt;##&gt;)];
+    bannerView.autoScroll = NO;
+    bannerView.minimumLineSpacing = &lt;#getWidth(30)#&gt;;
+    bannerView.itemSize = CGSizeMake(&lt;#getWidth(300)#&gt;, &lt;#bannerView.height#&gt;);
+    bannerView.pageControl.hidden = YES;
+    bannerView.delegate = self;
+    bannerView.dataSource = self;
+    [arrawView addSubview:bannerView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>27D5C2CF-BDFC-4F17-AD09-0719C8611BFC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>我的bannerView初始化</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>RJBannerView Init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
