@@ -15,8 +15,10 @@
 	<string>8746B025-D448-4A65-B4E9-F2FBFB016B18</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetTitle</key>
+	<key>IDECodeSnippetSummary</key>
 	<string>获取cell高度</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>cellHeight</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
