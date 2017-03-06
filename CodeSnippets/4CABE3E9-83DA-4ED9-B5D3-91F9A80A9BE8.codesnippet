@@ -33,6 +33,10 @@
     
 }
 
+- (void)reloadData{
+    
+}
+
 #pragma mark ----setViews
 
 - (void)setViews{

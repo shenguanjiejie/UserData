@@ -3,34 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>network_Request</string>
+	<string>addChildViewController</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSDictionary *params = @{
-                             @"&lt;##&gt;":&lt;##&gt;,
-                             @"&lt;##&gt;":&lt;##&gt;
-                             };
-    
-    NSString *url = &lt;##&gt;;
-    DDLog(@"%s %@---%@",__FUNCTION__,url,params);
-    
-[HttpTool &lt;#post#&gt;WithURL:url params:params hudView:self.view success:^(id json) {
-        DDLog(@"%s %@",__FUNCTION__,json);
-        
-    } failure:^(NSError *error) {
-        
-    }];</string>
+	<string>[self addChildViewController:&lt;#childViewController#&gt;];
+    [&lt;#childViewController#&gt; didMoveToParentViewController:self];
+    UIView *view = &lt;#childViewController#&gt;.view;
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:view];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>26484022-BE45-4EF1-BF78-363C2D3B5DC8</string>
+	<string>3D5999AF-D6A6-4889-8380-C6AD5027F185</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>网络请求套餐</string>
+	<string>添加子控制器</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Network Request</string>
+	<string>addChildViewController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

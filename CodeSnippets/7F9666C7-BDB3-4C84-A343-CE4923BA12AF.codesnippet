@@ -10,6 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>UIView *&lt;#name#&gt; = [[UIView alloc]init];
+&lt;#name#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
 &lt;#name#&gt;.backgroundColor = &lt;##&gt;;
 [&lt;##&gt; addSubview:&lt;#name#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -10,6 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>UIButton *&lt;#name#&gt; = [[UIButton alloc]init];
+&lt;#name#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
 &lt;#name#&gt;.backgroundColor = &lt;##&gt;;
 &lt;#name#&gt;.titleLabel.font = [UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];
 [&lt;#name#&gt; setTitle:&lt;#(nullable NSString *)#&gt; forState:UIControlStateNormal];

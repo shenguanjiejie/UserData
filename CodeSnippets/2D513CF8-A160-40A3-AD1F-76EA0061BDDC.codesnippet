@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>weakSelf</string>
+	<string>StackSymbols</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak __typeof(self) weakSelf = self;</string>
+	<string>[NSThread callStackSymbols]</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C32FEC77-520A-47D0-B14E-E8AFA65C831E</string>
+	<string>2D513CF8-A160-40A3-AD1F-76EA0061BDDC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>weakSelf</string>
+	<string>获取堆栈信息</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>解决block中self警告问题</string>
+	<string>callStackSymbols</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -33,6 +33,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UIView *view = [UIView new];
+        view.backgroundColor = kGlobalBackgroundColor;
+        cell.selectedBackgroundView = view;
     }
  
     return cell;

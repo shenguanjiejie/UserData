@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cycleScrollViewInit</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>_cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(titleLabel.left, _timeOutLabel.bottom, titleLabel.width, getWidth(340)) delegate:self placeholderImage:kPlaceholderImage];
+    _cycleScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+    _cycleScrollView.autoScroll = NO;
+    _cycleScrollView.infiniteLoop = NO;
+    _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"&lt;#currentDotImage#&gt;"];
+    _cycleScrollView.pageDotImage = [UIImage imageNamed:@"&lt;#dotImage#&gt;"];
+    _cycleScrollView.backgroundColor = [UIColor clearColor];
+    [headerView addSubview:_cycleScrollView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F3DE3DC4-C5D1-4947-91C1-32860C183DF8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>cycleScrollView初始化,自动轮播图</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>cycleScrollViewInit</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

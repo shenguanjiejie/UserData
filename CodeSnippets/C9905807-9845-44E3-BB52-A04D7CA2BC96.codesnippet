@@ -3,34 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>network_Request</string>
+	<string>removeViewController</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSDictionary *params = @{
-                             @"&lt;##&gt;":&lt;##&gt;,
-                             @"&lt;##&gt;":&lt;##&gt;
-                             };
-    
-    NSString *url = &lt;##&gt;;
-    DDLog(@"%s %@---%@",__FUNCTION__,url,params);
-    
-[HttpTool &lt;#post#&gt;WithURL:url params:params hudView:self.view success:^(id json) {
-        DDLog(@"%s %@",__FUNCTION__,json);
-        
-    } failure:^(NSError *error) {
-        
-    }];</string>
+	<string>[&lt;#childViewController#&gt; willMoveToParentViewController:nil];
+    [&lt;#childViewController#&gt;.view removeFromSuperview];
+    [&lt;#childViewController#&gt; removeFromParentViewController];
+    &lt;#childViewController#&gt; = nil;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>26484022-BE45-4EF1-BF78-363C2D3B5DC8</string>
+	<string>C9905807-9845-44E3-BB52-A04D7CA2BC96</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>网络请求套餐</string>
+	<string>移除子控制器</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Network Request</string>
+	<string>removeViewController</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
