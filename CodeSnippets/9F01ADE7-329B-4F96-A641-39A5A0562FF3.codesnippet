@@ -39,6 +39,23 @@
     }
  
     return cell;
+}
+
+#pragma mark - DZNEmptyDelegate
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
+    return kEmptyDataImage;
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
+    return kEmptyDataTitle(&lt;#title#&gt;);
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView{
+    return YES;
+}
+
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView{
+    return kGlobalBackgroundColor;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9F01ADE7-329B-4F96-A641-39A5A0562FF3</string>

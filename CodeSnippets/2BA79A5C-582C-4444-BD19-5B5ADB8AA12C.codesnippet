@@ -13,6 +13,8 @@
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.emptyDataSetSource = self;
+    _tableView.emptyDataSetDelegate = self;
     _tableView.tableFooterView = [UIView new];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.backgroundColor = [UIColor clearColor];

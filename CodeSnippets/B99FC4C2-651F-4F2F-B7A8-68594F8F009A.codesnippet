@@ -13,6 +13,7 @@
 &lt;#name#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
 &lt;#name#&gt;.backgroundColor = &lt;##&gt;;
 &lt;#name#&gt;.titleLabel.font = [UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];
+&lt;#name#&gt;.adjustsImageWhenHighlighted = NO;
 [&lt;#name#&gt; setTitle:&lt;#(nullable NSString *)#&gt; forState:UIControlStateNormal];
 [&lt;#name#&gt; setTitleColor:&lt;#(nullable UIColor *)#&gt; forState:UIControlStateNormal];
 [&lt;#name#&gt; addTarget:self action:@selector(&lt;#selector#&gt;) forControlEvents:UIControlEventTouchUpInside];

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strongSelf</string>
+	<string>attributeString</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) self = weakSelf;</string>
+	<string>[[NSAttributedString alloc]initWithString:title attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:&lt;#16#&gt;],NSForegroundColorAttributeName:&lt;#[UIColor lightGrayColor]#&gt;}];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A106F325-3AE5-4678-AAB0-1D434F9A9040</string>
+	<string>80A259CB-49F4-48ED-9A7C-B69A9F9871ED</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strongSelf weakSelf转strongSelf</string>
+	<string>attributeString</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strongSelf</string>
+	<string>attributeString</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

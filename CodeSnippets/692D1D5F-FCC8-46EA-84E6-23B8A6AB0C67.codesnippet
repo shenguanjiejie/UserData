@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strongSelf</string>
+	<string>myDateFormate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>StringOrComment</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) self = weakSelf;</string>
+	<string>yyyyMMddHHmmss</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A106F325-3AE5-4678-AAB0-1D434F9A9040</string>
+	<string>692D1D5F-FCC8-46EA-84E6-23B8A6AB0C67</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strongSelf weakSelf转strongSelf</string>
+	<string>时间formate格式</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strongSelf</string>
+	<string>myDateFormate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

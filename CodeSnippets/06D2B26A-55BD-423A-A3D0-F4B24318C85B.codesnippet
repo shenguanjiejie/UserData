@@ -3,24 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strongSelf</string>
+	<string>dudu</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) self = weakSelf;</string>
+	<string>#if duDu
+    &lt;##&gt;
+#elif duDuPad
+    &lt;##&gt;
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A106F325-3AE5-4678-AAB0-1D434F9A9040</string>
+	<string>06D2B26A-55BD-423A-A3D0-F4B24318C85B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strongSelf weakSelf转strongSelf</string>
+	<string>duDu专用</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strongSelf</string>
+	<string>duDu</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

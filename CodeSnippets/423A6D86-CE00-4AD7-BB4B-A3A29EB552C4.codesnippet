@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>globleNavigationBarSettings</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>[UINavigationBar appearance].barStyle  = UIBarStyleBlack;
+ [[UINavigationBar appearance] setBarTintColor:&lt;#[UIColor ]#&gt;];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+[UINavigationBar appearance].translucent = NO;//    Bar的模糊效果，默认为YES
+ //    iOS7及以后的版本支持，self.view.frame.origin.y会下移64像素至navigationBar下方。这样设置就会取消这种效果
+//self.edgesForExtendedLayout = UIRectEdgeNone;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>423A6D86-CE00-4AD7-BB4B-A3A29EB552C4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>设置全局的navigationBar</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>globleNavigationBarSettings</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

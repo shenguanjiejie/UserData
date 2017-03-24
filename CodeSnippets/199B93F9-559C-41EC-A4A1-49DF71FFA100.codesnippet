@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strongSelf</string>
+	<string>myRJTableViewCellInit</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) self = weakSelf;</string>
+	<string>cell = [[RJTableViewCell alloc] initWithStyle:RJTableViewCellStyleDefault reuseIdentifier:cellIdentifier RJTableViewCellInfo:nil];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A106F325-3AE5-4678-AAB0-1D434F9A9040</string>
+	<string>199B93F9-559C-41EC-A4A1-49DF71FFA100</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strongSelf weakSelf转strongSelf</string>
+	<string>我的cell的初始化</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strongSelf</string>
+	<string>RJTableViewCell init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

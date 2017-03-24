@@ -11,25 +11,25 @@
 		<key>Child</key>
 		<dict>
 			<key>DYLD_ROOT_PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
 			<key>DYLD_SHARED_REGION</key>
 			<string>avoid</string>
 			<key>IPHONE_SHARED_RESOURCES_DIRECTORY</key>
-			<string>/Users/w/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
+			<string>/Users/Vincent/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
 			<key>IPHONE_SIMULATOR_CLASS</key>
 			<string>J72</string>
 			<key>IPHONE_SIMULATOR_ROOT</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
 			<key>PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/bin:/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/bin:/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/sbin:/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/sbin:/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/local/bin</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/bin:/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/bin:/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/sbin:/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/sbin:/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/local/bin</string>
 			<key>SIMULATOR_CAPABILITIES</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/PrivatePlugIns/IDEInterfaceBuilderiOSIntegration.ideplugin/Contents/Resources/DeviceTypes/IBSimDeviceTypeiPad3x.simdevicetype/Contents/Resources/capabilities.plist</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/PrivatePlugIns/IDEInterfaceBuilderiOSIntegration.ideplugin/Contents/Resources/DeviceTypes/IBSimDeviceTypeiPad3x.simdevicetype/Contents/Resources/capabilities.plist</string>
 			<key>SIMULATOR_DEVICE_NAME</key>
 			<string>IBSimDeviceTypeiPad3x</string>
 			<key>SIMULATOR_HOST_HOME</key>
-			<string>/Users/w</string>
+			<string>/Users/Vincent</string>
 			<key>SIMULATOR_LOG_ROOT</key>
-			<string>/Users/w/Library/Logs/CoreSimulator/887393BC-4921-4A0C-8954-E4BDEEB6150F</string>
+			<string>/Users/Vincent/Library/Logs/CoreSimulator/887393BC-4921-4A0C-8954-E4BDEEB6150F</string>
 			<key>SIMULATOR_MAINSCREEN_HEIGHT</key>
 			<string>3072</string>
 			<key>SIMULATOR_MAINSCREEN_PITCH</key>
@@ -39,21 +39,21 @@
 			<key>SIMULATOR_MAINSCREEN_WIDTH</key>
 			<string>2304</string>
 			<key>SIMULATOR_MEMORY_WARNINGS</key>
-			<string>/Users/w/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data/var/run/memory_warning_simulation</string>
+			<string>/Users/Vincent/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data/var/run/memory_warning_simulation</string>
 			<key>SIMULATOR_MODEL_IDENTIFIER</key>
 			<string>iPad4,2</string>
 			<key>SIMULATOR_PLATFORM_RUNTIME_OVERLAY_ROOT</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/RuntimeOverlay</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/RuntimeOverlay</string>
 			<key>SIMULATOR_PRODUCT_CLASS</key>
 			<string>J72</string>
 			<key>SIMULATOR_ROOT</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
 			<key>SIMULATOR_RUNTIME_BUILD_VERSION</key>
 			<string>14C89</string>
 			<key>SIMULATOR_RUNTIME_VERSION</key>
 			<string>10.2</string>
 			<key>SIMULATOR_SHARED_RESOURCES_DIRECTORY</key>
-			<string>/Users/w/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
+			<string>/Users/Vincent/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
 			<key>SIMULATOR_UDID</key>
 			<string>887393BC-4921-4A0C-8954-E4BDEEB6150F</string>
 			<key>SIMULATOR_VERSION_INFO</key>
@@ -66,30 +66,30 @@
 		<key>ChildDefaults</key>
 		<dict>
 			<key>CFFIXED_USER_HOME</key>
-			<string>/Users/w/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
+			<string>/Users/Vincent/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
 			<key>DYLD_FALLBACK_FRAMEWORK_PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks</string>
 			<key>DYLD_FALLBACK_LIBRARY_PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib</string>
 			<key>HOME</key>
-			<string>/Users/w/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
+			<string>/Users/Vincent/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data</string>
 			<key>TMPDIR</key>
-			<string>/Users/w/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data/tmp/</string>
+			<string>/Users/Vincent/Library/Developer/Xcode/UserData/IB Support/Simulator Devices/887393BC-4921-4A0C-8954-E4BDEEB6150F/data/tmp/</string>
 		</dict>
 		<key>Paths</key>
 		<array>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/LaunchDaemons</string>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/Developer/Library/LaunchDaemons</string>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/RuntimeOverlay/System/Library/LaunchDaemons</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/LaunchDaemons</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/Developer/Library/LaunchDaemons</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/CoreSimulator/RuntimeOverlay/System/Library/LaunchDaemons</string>
 		</array>
 		<key>Self</key>
 		<dict>
 			<key>DYLD_FALLBACK_FRAMEWORK_PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks</string>
 			<key>DYLD_FALLBACK_LIBRARY_PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib</string>
 			<key>DYLD_ROOT_PATH</key>
-			<string>/Applications/Xcode-unsigned.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
+			<string>/Applications/XcodeGr8.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk</string>
 			<key>DYLD_SHARED_REGION</key>
 			<string>avoid</string>
 			<key>XPC_SIMULATOR_LAUNCHD_NAME</key>
