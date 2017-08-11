@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>podfile</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+inhibit_all_warnings!
+use_frameworks!
+
+xcodeproj ‘&lt;#app#&gt;.xcodeproj'
+
+target '&lt;#app#&gt;' do
+    
+pod 'MBProgressHUD'
+pod 'YYCategories'
+pod 'YYCache'
+pod 'IQKeyboardManager'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'BlocksKit'
+pod 'RSKImageCropper'
+pod 'MWPhotoBrowser'
+pod 'DZNEmptyDataSet'
+pod 'AliyunOSSiOS', '~&gt; 2.6.0'
+#pod 'PermissionScope'
+pod 'NSHash'
+#pod 'ZXingObjC'
+#pod 'LBXScan'
+pod 'FlatUIKit'
+#pod 'SCLAlertView-Objective-C'
+pod 'TZImagePickerController'
+pod 'CocoaLumberjack'
+pod 'SDCycleScrollView'
+pod 'LTNavigationBar'
+end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>54369E35-3DC2-43AC-9D5D-18BF344E95C4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Ruby</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>podfile 格式</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Podfile</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

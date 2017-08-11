@@ -14,6 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"&lt;##&gt;";
     self.view.backgroundColor = &lt;##&gt;;
     
     //初始化参数
@@ -31,18 +32,42 @@
     
 }
 
-- (void)getData{
-    
+-(void)getData{
+    [_tableView.mj_header beginRefreshing];
 }
 
 - (void)reloadData{
+    NSDictionary *params = @{
+                             @"&lt;##&gt;":&lt;##&gt;,
+                             @"&lt;##&gt;":&lt;##&gt;
+                             };
+    
+    NSString *url = baseUrlWithPath(@"&lt;##&gt;");
+    
+    [HttpTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
+        [self showJson:json];
+    } failure:^(NSError *error) {
+    } loginSuccess:&lt;#^(void)loginSuccess#&gt; loginCancel:&lt;#^(void)loginCancel#&gt;];
+}
+
+- (void)showJson:(id)json{
+
+    NSArray *tempArr = [&lt;#model#&gt; mj_objectArrayWithKeyValuesArray:json];
+    if (_pageIndex == 1) {
+        &lt;#_models#&gt; = [tempArr mutableCopy];
+    }else{
+        [&lt;#_models#&gt; addObjectsFromArray:tempArr];
+    }
+    _pageIndex++;
+    
+    [_tableView reloadData];
+    [_tableView.mj_header endRefreshing];
+    [_tableView.mj_footer endRefreshing];
     
 }
 
 #pragma mark ----setViews
-
 - (void)setViews{
-#pragma mark &lt;#headerView#&gt;
 
 }
 
@@ -52,7 +77,7 @@
 }
 
 #pragma mark - Private Methods
-</string>
+#pragma mark - Public Methods</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4CABE3E9-83DA-4ED9-B5D3-91F9A80A9BE8</string>
 	<key>IDECodeSnippetLanguage</key>

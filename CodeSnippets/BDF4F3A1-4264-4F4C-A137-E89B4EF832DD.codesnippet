@@ -3,25 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dudu</string>
+	<string>arrowView_init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#if duDu
-    &lt;##&gt;
-#elif duDuPad
-    &lt;##&gt;
-#endif</string>
+	<string>DrawArrowView *arrowView = [[DrawArrowView alloc]init];
+        arrowView.translatesAutoresizingMaskIntoConstraints = NO;
+        arrowView.arrowDirection = ArrowDirectionBottom;
+        arrowView.arrowPosition = &lt;##&gt;;
+        arrowView.arrowWidth = &lt;##&gt;;
+        arrowView.arrowHeight = &lt;##&gt;;
+        arrowView.fillColor = [UIColor whiteColor];
+        arrowView.layer.cornerRadius = 5;
+        [&lt;##&gt; addSubview:arrowView];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>06D2B26A-55BD-423A-A3D0-F4B24318C85B</string>
+	<string>BDF4F3A1-4264-4F4C-A137-E89B4EF832DD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>duDu专用</string>
+	<string>尖角View初始化</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>duDu</string>
+	<string>arrowView_init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

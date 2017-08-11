@@ -3,25 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dudu</string>
+	<string>willAppear</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#if duDu
-    &lt;##&gt;
-#elif duDuPad
-    &lt;##&gt;
-#endif</string>
+	<string>-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>06D2B26A-55BD-423A-A3D0-F4B24318C85B</string>
+	<string>F3BC332A-8EAF-4317-BE5F-A7C2231A3B28</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>duDu专用</string>
+	<string>设置显示隐藏导航栏</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>duDu</string>
+	<string>willAppear &amp; willDisappear</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

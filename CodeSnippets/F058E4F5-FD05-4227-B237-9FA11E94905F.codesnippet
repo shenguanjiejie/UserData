@@ -3,25 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>dudu</string>
+	<string>constString</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#if duDu
-    &lt;##&gt;
-#elif duDuPad
-    &lt;##&gt;
-#endif</string>
+	<string>static NSString * const &lt;#name#&gt; = @"&lt;#String#&gt;";</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>06D2B26A-55BD-423A-A3D0-F4B24318C85B</string>
+	<string>F058E4F5-FD05-4227-B237-9FA11E94905F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>duDu专用</string>
+	<string>定义const字符串</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>duDu</string>
+	<string>constString</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -9,12 +9,40 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [self.window makeKeyAndVisible];
-    
-    MainViewController *root =[[MainViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
-    self.window.rootViewController = nav;</string>
+	<string>self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+[self.window makeKeyAndVisible];
+
+TabBarController *tabBarVC =[[TabBarController alloc] init];
+UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+self.window.rootViewController = nav;
+
+IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+manager.enable = YES;
+manager.shouldResignOnTouchOutside = YES;
+manager.shouldToolbarUsesTextFieldTintColor = NO;
+manager.enableAutoToolbar = NO;
+
+//设置CocoaLumberjack
+[DDLog addLogger:[DDASLLogger sharedInstance]];
+[DDLog addLogger:[DDTTYLogger sharedInstance]];
+setenv("XcodeColors", "YES", 0);
+[[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+
+[[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:DDLogFlagInfo];
+[[DDTTYLogger sharedInstance] setForegroundColor:[UIColor redColor] backgroundColor:nil forFlag:DDLogFlagError];
+[[DDTTYLogger sharedInstance] setForegroundColor:[UIColor purpleColor] backgroundColor:nil forFlag:DDLogFlagWarning];
+[[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blackColor] backgroundColor:nil forFlag:DDLogFlagVerbose];
+[[DDTTYLogger sharedInstance] setForegroundColor:[UIColor darkGrayColor] backgroundColor:nil forFlag:DDLogFlagDebug];
+
+NSString *basePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) firstObject];
+DDLogInfo(@"%s 沙盒目录:%@",__FUNCTION__,basePath);
+
+[UINavigationBar appearance].barStyle  = UIBarStyleBlack;
+[[UINavigationBar appearance] setBarTintColor:kGreenColor];
+[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+[UINavigationBar appearance].translucent = YES;//    Bar的模糊效果，默认为YES,如果设置为NO,那么navigationBar还会有占64像素的效果
+//    iOS7及以后的版本支持，self.view.frame.origin.y会下移64像素至navigationBar下方。这样设置就会取消这种效果
+//self.edgesForExtendedLayout = UIRectEdgeNone;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>AA0EF10E-9C42-4A85-8F07-A5734914EE31</string>
 	<key>IDECodeSnippetLanguage</key>

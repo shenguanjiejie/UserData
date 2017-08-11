@@ -11,6 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>UICollectionViewFlowLayout *layout= [[UICollectionViewFlowLayout alloc]init];
 layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//定义行和列之间的间距
 layout.minimumLineSpacing = 0.0;
 layout.minimumInteritemSpacing = 0.0;
 _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];

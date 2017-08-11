@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>permission</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+#pragma mark -相机、相册权限
++ (BOOL)isGetCameraPermission
+{
+    BOOL isCameraValid = YES;
+    //ios7之前系统默认拥有权限
+    if([[[UIDevice currentDevice] systemVersion] floatValue] &gt;= 7.0)
+    {
+        AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        
+        if (authStatus == AVAuthorizationStatusDenied)
+        {
+            isCameraValid = NO;
+        }
+    }
+    return isCameraValid;
+}
+
+
++ (BOOL)isGetPhotoPermission
+{
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] &lt; 8.0)
+    {
+        ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
+        
+        if ( author == ALAuthorizationStatusDenied ) {
+            
+            return NO;
+        }
+        return YES;
+    }
+    
+    PHAuthorizationStatus authorStatus = [PHPhotoLibrary authorizationStatus];
+    if ( authorStatus == PHAuthorizationStatusDenied ) {
+        
+        return NO;
+    }
+    return YES;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5899A53B-EDA1-4331-AC35-2C5525DAAB15</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>相机和相册权限判断</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>permission</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

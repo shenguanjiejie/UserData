@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>popView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>[YBPopupMenu showAtPoint:&lt;#point#&gt; titles:@[@"&lt;#编辑#&gt;",@"&lt;#编辑#&gt;"] icons:@[@"&lt;#编辑#&gt;",@"&lt;#编辑#&gt;"] menuWidth:&lt;#width#&gt; otherSettings:^(YBPopupMenu *popupMenu) {
+        popupMenu.delegate = self;
+        popupMenu.type = YBPopupMenuTypeDark;
+        popupMenu.rectCorner = UIRectCornerAllCorners;
+        popupMenu.priorityDirection = YBPopupMenuPriorityDirectionTop;
+        popupMenu.showMaskView = NO;
+        popupMenu.arrowHeight = 7;
+        popupMenu.fontSize = 14;
+        popupMenu.backColor = kGlobalBackgroundColor;
+        popupMenu.textColor = kBlackColor;
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>08C1F476-C464-4B99-BD58-1A829A7D8135</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>YBPopupMenu的初始化,pop尖角列表</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>YBPopupMenu_init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

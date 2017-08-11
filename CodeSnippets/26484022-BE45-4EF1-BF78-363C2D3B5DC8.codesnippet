@@ -10,19 +10,16 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>NSDictionary *params = @{
-                             @"&lt;##&gt;":&lt;##&gt;,
-                             @"&lt;##&gt;":&lt;##&gt;
-                             };
-    
-    NSString *url = &lt;##&gt;;
-    DDLog(@"%s %@---%@",__FUNCTION__,url,params);
-    
-[HttpTool &lt;#post#&gt;WithURL:url params:params hudView:self.view success:^(id json) {
-        DDLog(@"%s %@",__FUNCTION__,json);
-        
-    } failure:^(NSError *error) {
-        
-    }];</string>
+                         @"&lt;##&gt;":&lt;##&gt;,
+                         @"&lt;##&gt;":&lt;##&gt;
+                         };
+
+NSString *url = baseUrlWithPath(@"&lt;##&gt;");
+
+[HttpTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
+    [self showJson:json];
+} failure:^(NSError *error) {
+} loginSuccess:&lt;#^(void)loginSuccess#&gt; loginCancel:&lt;#^(void)loginCancel#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>26484022-BE45-4EF1-BF78-363C2D3B5DC8</string>
 	<key>IDECodeSnippetLanguage</key>

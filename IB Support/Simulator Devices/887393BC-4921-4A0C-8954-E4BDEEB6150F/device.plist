@@ -11,6 +11,6 @@
 	<key>runtime</key>
 	<string>com.apple.CoreSimulator.SimRuntime.iOS-10-2</string>
 	<key>state</key>
-	<integer>3</integer>
+	<integer>1</integer>
 </dict>
 </plist>

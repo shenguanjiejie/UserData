@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>hitTest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    UIView *view = [super hitTest:point withEvent:event];
+    if (view == nil) {
+        for (UIView *subView in self.subviews) {
+            CGPoint tp = [subView convertPoint:point fromView:self];
+            if (CGRectContainsPoint(subView.bounds, tp)) {
+                if (!subView.hidden) {
+                    view = subView;
+                }
+            }
+        }
+    }
+    return view;
+}   </string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>615B5BB9-8960-4E24-8532-E29BA19EE67F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>解决点击该view中的subView时,因超过view的layer区域不触发事件的问题你</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>view 的public方法 hitTestWithEvent </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
