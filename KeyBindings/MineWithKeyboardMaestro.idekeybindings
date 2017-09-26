@@ -79,8 +79,6 @@
 				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
-				<key>Keyboard Shortcut</key>
-				<string>@e</string>
 				<key>Navigation</key>
 				<string>NO</string>
 				<key>Title</key>
@@ -125,26 +123,6 @@
 				<string>NO</string>
 				<key>Title</key>
 				<string>Profile…</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>find:</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>CommandID</key>
-				<string>Xcode.IDEKit.CmdDefinition.Find</string>
-				<key>Group</key>
-				<string>Find Menu</string>
-				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Main</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>Keyboard Shortcut</key>
-				<string>~f</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>Find…</string>
 			</dict>
 			<dict>
 				<key>Action</key>
@@ -770,32 +748,12 @@
 			<string>complete:</string>
 			<key>@'</key>
 			<string>deleteBackward:</string>
-			<key>@;</key>
-			<string>moveToRightEndOfLine:</string>
-			<key>@\ </key>
-			<string>insertNewline:</string>
-			<key>@f</key>
-			<string>moveLeft:</string>
-			<key>@g</key>
-			<string>moveDown:</string>
-			<key>@h</key>
-			<string>moveUp:</string>
-			<key>@j</key>
-			<string>moveRight:</string>
 			<key>@</key>
-			<string>moveToRightEndOfLine:</string>
+			<string>moveToEndOfLine:</string>
 			<key>^h</key>
 			<string>deleteBackward:</string>
 			<key></key>
 			<string>deleteBackward:</string>
-			<key></key>
-			<string>moveUp:</string>
-			<key></key>
-			<string>moveDown:</string>
-			<key></key>
-			<string>moveLeft:</string>
-			<key></key>
-			<string>moveRight:</string>
 		</dict>
 		<key>Version</key>
 		<integer>3</integer>

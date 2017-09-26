@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>font_My</string>
+	<string>my_font</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];</string>
+	<string>kSystemFontSize(&lt;#13#&gt;);</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>124B7A21-A73B-4AD1-ACC5-8E2AA6A7C96E</string>
 	<key>IDECodeSnippetLanguage</key>

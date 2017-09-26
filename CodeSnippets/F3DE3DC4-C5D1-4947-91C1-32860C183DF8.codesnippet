@@ -12,8 +12,8 @@
 	<string>_cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(titleLabel.left, _timeOutLabel.bottom, titleLabel.width, getWidth(340)) delegate:self placeholderImage:kPlaceholderImage];
     _cycleScrollView.translatesAutoresizingMaskIntoConstraints = NO;
     _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
-    _cycleScrollView.autoScroll = NO;
-    _cycleScrollView.infiniteLoop = NO;
+    _cycleScrollView.autoScroll = YES;
+    _cycleScrollView.infiniteLoop = YES;
     _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"&lt;#currentDotImage#&gt;"];
     _cycleScrollView.pageDotImage = [UIImage imageNamed:@"&lt;#dotImage#&gt;"];
     _cycleScrollView.backgroundColor = [UIColor clearColor];

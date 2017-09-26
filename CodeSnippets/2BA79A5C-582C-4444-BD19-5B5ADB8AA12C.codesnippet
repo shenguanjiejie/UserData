@@ -23,7 +23,11 @@
     NSDictionary *views = NSDictionaryOfVariableBindings(_tableView);
     NSDictionary *metrics = @{@"&lt;#margin#&gt;":&lt;#value#&gt;};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_tableView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]|" options:0 metrics:nil views:views]];</string>
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]|" options:0 metrics:nil views:views]];
+
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    [self reloadData];
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2BA79A5C-582C-4444-BD19-5B5ADB8AA12C</string>
 	<key>IDECodeSnippetLanguage</key>
