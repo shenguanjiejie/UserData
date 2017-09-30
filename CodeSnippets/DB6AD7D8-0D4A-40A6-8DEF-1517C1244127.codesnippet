@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DDLog_RJ_text</string>
+	<string>DDLogText</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDLog(@"%s &lt;#type#&gt;",__FUNCTION__);</string>
+	<string>DDLog(@"&lt;#type#&gt;");</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DB6AD7D8-0D4A-40A6-8DEF-1517C1244127</string>
 	<key>IDECodeSnippetLanguage</key>

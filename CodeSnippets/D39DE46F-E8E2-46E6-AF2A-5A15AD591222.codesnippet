@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDLog(@"%s %&lt;#type#&gt;",__FUNCTION__,&lt;#variate#&gt;);</string>
+	<string>DDLog(@"%&lt;#type#&gt;",&lt;#variate#&gt;);</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>D39DE46F-E8E2-46E6-AF2A-5A15AD591222</string>
 	<key>IDECodeSnippetLanguage</key>
