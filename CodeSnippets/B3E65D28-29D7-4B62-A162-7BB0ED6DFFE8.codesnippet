@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>MyTextField</string>
+	<string>rjSearchTextField</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -51,7 +51,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>动态加载想要查找的联系人或者其他-如:输入a后就出现名字包含a的联系人</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MyTextField:shouldChangeCharactersInRange:replacementString:</string>
+	<string>rjTextField:shouldChangeCharactersInRange:replacementString:</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

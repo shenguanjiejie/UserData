@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>rjtextField_init</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UITextField * &lt;#_textField#&gt; = [[UITextField alloc] init];
+        &lt;#_textField#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
+        &lt;#_textField#&gt;.backgroundColor = [UIColor clearColor];
+        &lt;#_textField#&gt;.textColor = &lt;#color#&gt;;
+        &lt;#_textField#&gt;.font = kSystemFontSize(&lt;#x#&gt;);
+        &lt;#_textField#&gt;.contentMode = UIViewContentModeCenter;
+        &lt;#_textField#&gt;.keyboardType = UIKeyboardTypeNumberPad;
+        [self.view addSubview:&lt;#_textField#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>394B834E-C941-426A-BA4E-13CE545494BD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UITextField初始化</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>textField_init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
