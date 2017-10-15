@@ -9,13 +9,13 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) self = weakSelf;</string>
+	<string>__strong __typeof(weakSelf) strongSelf = weakSelf;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A106F325-3AE5-4678-AAB0-1D434F9A9040</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strongSelf weakSelf转strongSelf</string>
+	<string>strongSelf</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>strongSelf</string>
 	<key>IDECodeSnippetUserSnippet</key>

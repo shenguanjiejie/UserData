@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>myDateFormatter</string>
+	<string>rjDateFormatter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
@@ -30,7 +30,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>定义日期的字符串格式</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>myDateFormatter</string>
+	<string>rjDateFormatter</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

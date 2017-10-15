@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>delete@""</string>
+	<string>gcd_main</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[&lt;#text#&gt; stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];</string>
+	<string>dispatch_async(dispatch_get_main_queue(), ^{
+            &lt;#UpdateUI#&gt;
+        });</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>37513A07-68EB-4BC8-BD0A-809C05C6613B</string>
+	<string>BC9A1CB7-D848-4539-BC0F-B243978CE2FD</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>delete""</string>
+	<string>GCD_Main方法</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>去掉字符串两端空格和中间换行</string>
+	<string>GCD_Main</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

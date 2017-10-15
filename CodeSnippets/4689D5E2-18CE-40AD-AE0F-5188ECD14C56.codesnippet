@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>delete@""</string>
+	<string>strong_self</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[&lt;#text#&gt; stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];</string>
+	<string>@strongify(self)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>37513A07-68EB-4BC8-BD0A-809C05C6613B</string>
+	<string>4689D5E2-18CE-40AD-AE0F-5188ECD14C56</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>delete""</string>
+	<string>把weak_self转为strong_self:@strongify(self)</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>去掉字符串两端空格和中间换行</string>
+	<string>strong_self</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
