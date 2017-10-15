@@ -9,7 +9,9 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[[NSAttributedString alloc]initWithString:title attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:&lt;#16#&gt;],NSForegroundColorAttributeName:&lt;#[UIColor lightGrayColor]#&gt;}];</string>
+	<string>NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc]initWithString:&lt;#str#&gt; attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:&lt;#16#&gt;],NSForegroundColorAttributeName:&lt;#[UIColor lightGrayColor]#&gt;}];
+NSRange range = [&lt;#str#&gt; rangeOfString:kLocalString(&lt;#localStr#&gt;)];
+[attributeString yy_setColor:&lt;#(nullable UIColor *)#&gt; range:range];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>80A259CB-49F4-48ED-9A7C-B69A9F9871ED</string>
 	<key>IDECodeSnippetLanguage</key>
