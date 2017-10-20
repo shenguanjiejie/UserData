@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>UILabel *&lt;#name#&gt; = [[UILabel alloc]init];
 &lt;#name#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
-&lt;#name#&gt;.font = [UIFont systemFontOfSize:&lt;#(CGFloat)#&gt;];
+&lt;#name#&gt;.font = kSystemFontSize(&lt;#x#&gt;);
 &lt;#name#&gt;.textColor = &lt;##&gt;;
 &lt;#name#&gt;.textAlignment = NSTextAlignmentCenter;
 &lt;#name#&gt;.text = &lt;##&gt;;

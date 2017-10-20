@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strong_self</string>
+	<string>rjstring_middle_line</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@strongify(self)</string>
+	<string>NSMutableAttributedString *attribtStr = [[NSMutableAttributedString alloc]initWithString:&lt;#string#&gt; attributes:@{NSStrikethroughStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]}];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4689D5E2-18CE-40AD-AE0F-5188ECD14C56</string>
+	<string>1DD20396-9998-47D8-B85D-161E65500124</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>把weak_self转为strong_self:@strongify(self)</string>
+	<string>中划线文字</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strong_self</string>
+	<string>rjstring_middle_line</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
