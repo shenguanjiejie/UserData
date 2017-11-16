@@ -3,25 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>imageViewinit</string>
+	<string>init_cell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIImageView *&lt;#name#&gt; = [[UIImageView alloc]init];
-&lt;#name#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
-&lt;#name#&gt;.contentMode = UIViewContentModeScaleAspectFill;
-&lt;#name#&gt;.clipsToBounds = YES;
-[&lt;##&gt; addSubview:&lt;#name#&gt;];</string>
+	<string>- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        &lt;#statements#&gt;
+    }
+    return self;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CA9B3991-327E-488B-BD39-8FBA6F636DEB</string>
+	<string>43B34FE8-D295-4237-A37C-894F6EE00FFE</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>imageView init</string>
+	<string>cell构造方法</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>imageView init</string>
+	<string>initWithStyle: reuseIdentifier:</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

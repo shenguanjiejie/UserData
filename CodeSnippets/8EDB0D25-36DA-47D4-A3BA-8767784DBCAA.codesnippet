@@ -2,20 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>annotation</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__strong __typeof(weakSelf) strongSelf = weakSelf;</string>
+	<string>/**&lt;#注释#&gt;*/</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A106F325-3AE5-4678-AAB0-1D434F9A9040</string>
+	<string>8EDB0D25-36DA-47D4-A3BA-8767784DBCAA</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>strongSelf</string>
+	<string>/**注释*/</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strongSelf</string>
+	<string>annotation</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
