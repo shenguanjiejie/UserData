@@ -12,7 +12,7 @@
 	<string>UIImageView *&lt;#name#&gt; = [[UIImageView alloc]init];
 &lt;#name#&gt;.translatesAutoresizingMaskIntoConstraints = NO;
 &lt;#name#&gt;.contentMode = UIViewContentModeScaleAspectFill;
-_imageV.clipsToBounds = YES;
+&lt;#name#&gt;.clipsToBounds = YES;
 [&lt;##&gt; addSubview:&lt;#name#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CA9B3991-327E-488B-BD39-8FBA6F636DEB</string>
