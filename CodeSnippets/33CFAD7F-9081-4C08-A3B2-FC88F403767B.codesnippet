@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>strong_self</string>
+	<string>rj_short_row</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@strongify(self)</string>
+	<string>NSInteger row = indexPath.row;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4689D5E2-18CE-40AD-AE0F-5188ECD14C56</string>
+	<string>33CFAD7F-9081-4C08-A3B2-FC88F403767B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>把weak_self转为strong_self:@strongify(self)</string>
+	<string>NSInteger row = indexPath.row;</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>strong_self</string>
+	<string>rj_short_row</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
