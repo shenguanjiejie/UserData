@@ -5,23 +5,23 @@
 	<key>DVTConsoleDebuggerInputTextColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTConsoleDebuggerInputTextFont</key>
-	<string>MicrosoftYaHei - 13.0</string>
+	<string>MicrosoftYaHei - 15.0</string>
 	<key>DVTConsoleDebuggerOutputTextColor</key>
 	<string>0.916333 0.045272 0.0471079 1</string>
 	<key>DVTConsoleDebuggerOutputTextFont</key>
-	<string>MicrosoftYaHei - 13.0</string>
+	<string>MicrosoftYaHei - 15.0</string>
 	<key>DVTConsoleDebuggerPromptTextColor</key>
 	<string>0.00675867 0.245534 0.998718 1</string>
 	<key>DVTConsoleDebuggerPromptTextFont</key>
-	<string>MicrosoftYaHei - 13.0</string>
+	<string>MicrosoftYaHei - 15.0</string>
 	<key>DVTConsoleExectuableInputTextColor</key>
 	<string>0.916333 0.045272 0.0471079 1</string>
 	<key>DVTConsoleExectuableInputTextFont</key>
-	<string>MicrosoftYaHei - 13.0</string>
+	<string>MicrosoftYaHei - 15.0</string>
 	<key>DVTConsoleExectuableOutputTextColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTConsoleExectuableOutputTextFont</key>
-	<string>MicrosoftYaHei - 13.0</string>
+	<string>MicrosoftYaHei - 15.0</string>
 	<key>DVTConsoleTextBackgroundColor</key>
 	<string>0.701961 1 0.662745 1</string>
 	<key>DVTConsoleTextInsertionPointColor</key>
@@ -31,7 +31,7 @@
 	<key>DVTDebuggerInstructionPointerColor</key>
 	<string>0.705792 0.8 0.544 1</string>
 	<key>DVTFontSizeModifier</key>
-	<integer>1</integer>
+	<integer>3</integer>
 	<key>DVTLineSpacing</key>
 	<real>1.1000000238418579</real>
 	<key>DVTMarkupTextBackgroundColor</key>
@@ -39,37 +39,37 @@
 	<key>DVTMarkupTextBorderColor</key>
 	<string>0.620766 0.8832 0.585835 1</string>
 	<key>DVTMarkupTextCodeFont</key>
-	<string>SFMono-Regular - 15.0</string>
+	<string>SFMono-Regular - 17.0</string>
 	<key>DVTMarkupTextEmphasisColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTMarkupTextEmphasisFont</key>
-	<string>.AppleSystemUIFontItalic - 15.0</string>
+	<string>.AppleSystemUIFontItalic - 17.0</string>
 	<key>DVTMarkupTextInlineCodeColor</key>
 	<string>0 0 0 0.7</string>
 	<key>DVTMarkupTextLinkColor</key>
 	<string>0 0 1 1</string>
 	<key>DVTMarkupTextLinkFont</key>
-	<string>.AppleSystemUIFont - 15.0</string>
+	<string>.AppleSystemUIFont - 17.0</string>
 	<key>DVTMarkupTextNormalColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTMarkupTextNormalFont</key>
-	<string>.AppleSystemUIFont - 15.0</string>
+	<string>.AppleSystemUIFont - 17.0</string>
 	<key>DVTMarkupTextOtherHeadingColor</key>
 	<string>0 0 0 0.5</string>
 	<key>DVTMarkupTextOtherHeadingFont</key>
-	<string>.AppleSystemUIFont - 20.6</string>
+	<string>.AppleSystemUIFont - 22.6</string>
 	<key>DVTMarkupTextPrimaryHeadingColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTMarkupTextPrimaryHeadingFont</key>
-	<string>.AppleSystemUIFont - 34.6</string>
+	<string>.AppleSystemUIFont - 36.6</string>
 	<key>DVTMarkupTextSecondaryHeadingColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTMarkupTextSecondaryHeadingFont</key>
-	<string>.AppleSystemUIFont - 26.2</string>
+	<string>.AppleSystemUIFont - 28.2</string>
 	<key>DVTMarkupTextStrongColor</key>
 	<string>0 0 0 1</string>
 	<key>DVTMarkupTextStrongFont</key>
-	<string>.AppleSystemUIFontBold - 15.0</string>
+	<string>.AppleSystemUIFontBold - 17.0</string>
 	<key>DVTSourceTextBackground</key>
 	<string>0.70286 1 0.66331 1</string>
 	<key>DVTSourceTextBlockDimBackgroundColor</key>
@@ -134,51 +134,51 @@
 	<key>DVTSourceTextSyntaxFonts</key>
 	<dict>
 		<key>xcode.syntax.attribute</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.character</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.comment</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.comment.doc</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.class</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.class.system</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.constant</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.constant.system</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.function</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.function.system</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.macro</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.macro.system</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.type</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.type.system</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.variable</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.identifier.variable.system</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.keyword</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.number</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.plain</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.preprocessor</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.string</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 		<key>xcode.syntax.url</key>
-		<string>MicrosoftYaHei - 16.0</string>
+		<string>MicrosoftYaHei - 18.0</string>
 	</dict>
 </dict>
 </plist>
