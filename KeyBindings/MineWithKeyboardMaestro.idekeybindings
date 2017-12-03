@@ -757,6 +757,7 @@
 			<key></key>
 			<array>
 				<string>moveToEndOfText:</string>
+				<string>moveToEndOfParagraphAndModifySelection:</string>
 			</array>
 			<key></key>
 			<string>deleteBackward:</string>
@@ -768,6 +769,10 @@
 			<string>deleteBackward:</string>
 			<key>@</key>
 			<string>moveToEndOfLine:</string>
+			<key>^$@D</key>
+			<string>deleteParagraph:</string>
+			<key>^$E</key>
+			<string>selectParagraph:</string>
 			<key>^h</key>
 			<string>deleteBackward:</string>
 			<key>^~$@D</key>
