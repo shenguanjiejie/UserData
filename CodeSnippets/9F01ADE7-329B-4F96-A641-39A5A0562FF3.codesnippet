@@ -55,7 +55,7 @@
 }
 
 - (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView{
-    return kGlobalBackgroundColor;
+    return [UIColor clearColor];
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9F01ADE7-329B-4F96-A641-39A5A0562FF3</string>
