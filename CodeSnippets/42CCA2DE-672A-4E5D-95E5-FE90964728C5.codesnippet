@@ -9,10 +9,11 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/**&lt;#你猜😜#&gt;*/
+	<string>
 - (void)&lt;#methodName#&gt;{
     &lt;#code#&gt;
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>42CCA2DE-672A-4E5D-95E5-FE90964728C5</string>
 	<key>IDECodeSnippetLanguage</key>

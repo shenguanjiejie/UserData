@@ -12,8 +12,7 @@
 		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/**&lt;#你猜😜#&gt;*/
-@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;
+	<string>@property (nonatomic, strong) &lt;#type#&gt; *&lt;#name#&gt;;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>963F7D6B-9485-418F-A496-17E2410D58D6</string>

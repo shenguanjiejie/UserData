@@ -9,8 +9,8 @@
 		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/**&lt;#你猜😜#&gt;*/
-@property (nonatomic, copy) void (^&lt;#rankChange#&gt;)(&lt;#NSString#&gt; *&lt;#rank#&gt;);</string>
+	<string>@property (nonatomic, copy) void (^&lt;#rankChange#&gt;)(&lt;#NSString#&gt; *&lt;#rank#&gt;);
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>99ADDD09-2695-4F9F-931F-A61559D4AA1C</string>
 	<key>IDECodeSnippetLanguage</key>

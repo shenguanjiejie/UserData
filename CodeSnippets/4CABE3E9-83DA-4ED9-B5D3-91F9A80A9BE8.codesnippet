@@ -53,17 +53,14 @@
 - (void)showJson:(id)json{
 
     NSArray *tempArr = [&lt;#model#&gt; mj_objectArrayWithKeyValuesArray:json];
-    if (!tempArr.count) {
-        [_tableView.mj_header endRefreshing];
-        [_tableView.mj_footer endRefreshing];
-        return;
-    }
     if (_pageIndex == 1) {
         &lt;#_models#&gt; = [tempArr mutableCopy];
     }else{
         [&lt;#_models#&gt; addObjectsFromArray:tempArr];
     }
-    _pageIndex++;
+    if (tempArr.count) {
+        _pageIndex++;
+    }
     
     [_tableView reloadData];
     [_tableView.mj_header endRefreshing];
