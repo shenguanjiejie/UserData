@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>keyboard_observer</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [IQKeyboardManager sharedManager].enable = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [IQKeyboardManager sharedManager].enable = YES;
+}
+
+
+#pragma mark - keyboardNotification
+
+- (void)KeyboardWillShow:(NSNotification *)notification{
+    NSDictionary *info = [notification userInfo];
+    CGRect endFrame = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat height = endFrame.size.height;
+    
+    &lt;#_keyboardViewTopCons#&gt;.constant = -(height + 45);
+    &lt;#_keyboardViewBottomCons#&gt;.constant = -height;
+    [self.view layoutIfNeeded];
+}
+
+- (void)KeyboardWillHide:(NSNotification *)notification{
+    &lt;#_keyboardViewBottomCons#&gt;.constant = 0;
+    &lt;#_keyboardViewTopCons#&gt;.constant = -45;
+    [self.view layoutIfNeeded];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9BAF89C2-90B5-4C09-937B-3B0A37A03929</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>键盘隐藏显示监听改变输入框位置</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>keyboardObserver</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
