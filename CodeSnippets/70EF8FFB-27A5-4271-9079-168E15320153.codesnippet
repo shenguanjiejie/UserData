@@ -3,21 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DDDLog</string>
+	<string>init_cell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDDLog(@"%&lt;#type#&gt;",&lt;#variate#&gt;);</string>
+	<string>- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+    }
+    return self;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D39DE46F-E8E2-46E6-AF2A-5A15AD591222</string>
+	<string>70EF8FFB-27A5-4271-9079-168E15320153</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>自定义NSLog</string>
+	<string>UITableViewCell的初始化方法</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DDDlog_RJ_V</string>
+	<string>init_cell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

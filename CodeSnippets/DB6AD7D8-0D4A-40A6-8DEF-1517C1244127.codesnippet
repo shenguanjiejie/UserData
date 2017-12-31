@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DDLogText</string>
+	<string>DDDLogText</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDLog(@"&lt;#type#&gt;");</string>
+	<string>DDDLog(@"&lt;#type#&gt;");</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DB6AD7D8-0D4A-40A6-8DEF-1517C1244127</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>DDLog_RJ_text</string>
+	<string>DDDLog_RJ_text</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DDLog_RJ_text</string>
+	<string>DDDLog_RJ_text</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

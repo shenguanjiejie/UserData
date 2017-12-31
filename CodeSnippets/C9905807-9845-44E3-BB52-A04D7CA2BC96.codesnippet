@@ -9,10 +9,12 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[&lt;#childViewController#&gt; willMoveToParentViewController:nil];
-    [&lt;#childViewController#&gt;.view removeFromSuperview];
-    [&lt;#childViewController#&gt; removeFromParentViewController];
-    &lt;#childViewController#&gt; = nil;</string>
+	<string> [&lt;#childViewController#&gt; willMoveToParentViewController:nil];
+[&lt;#childViewController#&gt; beginAppearanceTransition:NO animated:YES];
+[&lt;#childViewController#&gt;.view removeFromSuperview];
+[&lt;#childViewController#&gt; endAppearanceTransition];
+[&lt;#childViewController#&gt; removeFromParentViewController];
+&lt;#childViewController#&gt; = nil;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C9905807-9845-44E3-BB52-A04D7CA2BC96</string>
 	<key>IDECodeSnippetLanguage</key>

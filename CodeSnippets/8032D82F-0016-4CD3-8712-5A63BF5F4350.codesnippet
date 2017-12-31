@@ -2,22 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DDDLog</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDDLog(@"%&lt;#type#&gt;",&lt;#variate#&gt;);</string>
+	<string></string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D39DE46F-E8E2-46E6-AF2A-5A15AD591222</string>
+	<string>8032D82F-0016-4CD3-8712-5A63BF5F4350</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>自定义NSLog</string>
+	<string>Declare weak reference to self</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DDDlog_RJ_V</string>
+	<string></string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
