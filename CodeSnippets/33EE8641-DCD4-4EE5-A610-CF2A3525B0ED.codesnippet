@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>mj_arrayClassMaping</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+(NSDictionary *)mj_objectClassInArray{
+    return @{
+             @"&lt;#arrayProperty#&gt;":[&lt;#childClass#&gt; class],
+             @"&lt;#arrayProperty#&gt;":[&lt;#childClass#&gt; class]
+             };
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>33EE8641-DCD4-4EE5-A610-CF2A3525B0ED</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>数组与模型对应字典方法实现</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>mj_objectClassInArray</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
