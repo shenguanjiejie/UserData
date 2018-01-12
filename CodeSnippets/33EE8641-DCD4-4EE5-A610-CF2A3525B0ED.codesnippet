@@ -3,21 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DDDLog</string>
+	<string>mj_arrayClassMaping</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDDLog(@"%&lt;#type#&gt;",&lt;#variate#&gt;);</string>
+	<string>+(NSDictionary *)mj_objectClassInArray{
+    return @{
+             @"&lt;#arrayProperty#&gt;":[&lt;#childClass#&gt; class],
+             @"&lt;#arrayProperty#&gt;":[&lt;#childClass#&gt; class]
+             };
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D39DE46F-E8E2-46E6-AF2A-5A15AD591222</string>
+	<string>33EE8641-DCD4-4EE5-A610-CF2A3525B0ED</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>自定义NSLog</string>
+	<string>数组与模型对应字典方法实现</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DDDlog_RJ_V</string>
+	<string>mj_objectClassInArray</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -15,13 +15,13 @@
 	<key>IDECodeSnippetContents</key>
 	<string>#import &lt;objc/message.h&gt;
 
-static char k&lt;#AssociatedObject#&gt;Key;
+static const int k&lt;#AssociatedObject#&gt;Key;
 
 
-objc_setAssociatedObject(self, k&lt;#AssociatedObject#&gt;Key, &lt;#property#&gt;, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+objc_setAssociatedObject(self, &amp;&lt;#kAssociatedObjectKey#&gt;, &lt;#property#&gt;, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
 -(&lt;#property#&gt; *)&lt;#property#&gt;{
-    return objc_getAssociatedObject(self, k&lt;#AssociatedObject#&gt;Key);
+    return objc_getAssociatedObject(self, &amp;&lt;#kAssociatedObjectKey#&gt;);
 }
 </string>
 	<key>IDECodeSnippetIdentifier</key>

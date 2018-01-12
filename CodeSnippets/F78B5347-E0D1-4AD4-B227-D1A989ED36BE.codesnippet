@@ -2,22 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>DDDLog</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DDDLog(@"%&lt;#type#&gt;",&lt;#variate#&gt;);</string>
+	<string></string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D39DE46F-E8E2-46E6-AF2A-5A15AD591222</string>
+	<string>F78B5347-E0D1-4AD4-B227-D1A989ED36BE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>自定义NSLog</string>
+	<string>worked with @strongify</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DDDlog_RJ_V</string>
+	<string></string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

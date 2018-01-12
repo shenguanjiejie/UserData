@@ -20,14 +20,21 @@
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
 
-    NSDictionary *views = NSDictionaryOfVariableBindings(_tableView);
-    NSDictionary *metrics = @{@"&lt;#margin#&gt;":&lt;#value#&gt;};
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_tableView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_tableView]|" options:0 metrics:nil views:views]];
+    [self.view addHAlignConstraintToView:_tableView constant:0];
+    [self.view addBottomAlignConstraintToView:_tableView constant:0];
+    [&lt;#navView#&gt; addTopConstraintToView:_tableView constant:0];
 
-    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    @weakify(self)
+    _tableView.mj_header = [MJRefreshNormalHeader   headerWithRefreshingBlock:^{
+    @strongify(self)
+        self.pageIndex = 1;
+        [self reloadData];
+    }];
+
+_tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    @strongify(self)
     [self reloadData];
-    }];</string>
+}];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2BA79A5C-582C-4444-BD19-5B5ADB8AA12C</string>
 	<key>IDECodeSnippetLanguage</key>
