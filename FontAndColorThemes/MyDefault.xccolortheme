@@ -85,7 +85,7 @@
 		<key>xcode.syntax.attribute</key>
 		<string>0 0 0 1</string>
 		<key>xcode.syntax.character</key>
-		<string>0 0 1 1</string>
+		<string>0.000110865 0.00176024 0.998218 1</string>
 		<key>xcode.syntax.comment</key>
 		<string>0 0.456 0 1</string>
 		<key>xcode.syntax.comment.doc</key>
@@ -117,17 +117,17 @@
 		<key>xcode.syntax.identifier.variable.system</key>
 		<string>0.501961 0 0.501961 1</string>
 		<key>xcode.syntax.keyword</key>
-		<string>0 0 1 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.number</key>
-		<string>0 0 1 1</string>
+		<string>0.000110865 0.00176024 0.998218 1</string>
 		<key>xcode.syntax.plain</key>
-		<string>0.745213 0.562366 0.122237 1</string>
+		<string>0.000110865 0.00176024 0.998218 1</string>
 		<key>xcode.syntax.preprocessor</key>
-		<string>0.298039 0.298039 0.298039 1</string>
+		<string>0 0 0 1</string>
 		<key>xcode.syntax.string</key>
-		<string>0 0 1 1</string>
+		<string>0.000110865 0.00176024 0.998218 1</string>
 		<key>xcode.syntax.url</key>
-		<string>0 0 1 1</string>
+		<string>0 0 0 1</string>
 	</dict>
 	<key>DVTSourceTextSyntaxFonts</key>
 	<dict>
