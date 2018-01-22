@@ -9,7 +9,9 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#_tableView#&gt;.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+	<string>@weakify(self)
+&lt;#_tableView#&gt;.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    @strongify(self)
         [self reloadData];
     }];</string>
 	<key>IDECodeSnippetIdentifier</key>
