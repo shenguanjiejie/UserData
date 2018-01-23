@@ -43,7 +43,41 @@
     &lt;#_keyboardViewBottomCons#&gt;.constant = 0;
     &lt;#_keyboardViewTopCons#&gt;.constant = -45;
     [self.view layoutIfNeeded];
-}</string>
+}
+
+ - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+     if ([text isEqualToString:@"\n"]){
+         [self didPressSend:nil];
+         return NO;
+     }else{
+         NSString *string;
+         if (text.length &gt; 0) {
+             string = [textView.text stringByReplacingCharactersInRange:range withString:text];
+         }else{
+             string = [textView.text substringToIndex:textView.text.length - range.length];
+         }
+         CGFloat height = [Tools boundingRectWithString:string font:textView.font size:CGSizeMake(textView.width - 10, MAXFLOAT)].height + 5;
+         
+         #if 0
+         CGFloat newHeight = _keyboardViewBottomCons.constant - _keyboardViewTopCons.constant - height - textView.height;
+         if (fabs(newHeight) &lt; 45) {
+             _keyboardViewTopCons.constant = _keyboardViewBottomCons.constant - 45;
+         }else if (fabs(newHeight) &gt; 120){
+             _keyboardViewTopCons.constant = _keyboardViewBottomCons.constant - 120;
+         }else{
+             _keyboardViewTopCons.constant -= height - textView.height;
+         }
+         #else
+         height = YY_CLAMP(fabs(height), 40, 120);
+         _textView.heightConstraint.constant = height;
+         self.heightConstraint.constant = height + 40;
+         #endif
+         [self layoutIfNeeded];
+     }
+     
+     return YES;
+ }
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9BAF89C2-90B5-4C09-937B-3B0A37A03929</string>
 	<key>IDECodeSnippetLanguage</key>
