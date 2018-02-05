@@ -16,10 +16,10 @@
 
 NSString *url = baseUrlWithPath(@"&lt;##&gt;");
 
-[HttpTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
-    [self showJson:json];
+[RJAFNTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
+    
 } failure:^(NSError *error) {
-} loginSuccess:&lt;#^(void)loginSuccess#&gt; loginCancel:&lt;#^(void)loginCancel#&gt;];</string>
+}];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>26484022-BE45-4EF1-BF78-363C2D3B5DC8</string>
 	<key>IDECodeSnippetLanguage</key>

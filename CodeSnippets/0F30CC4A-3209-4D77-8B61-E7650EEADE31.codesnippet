@@ -3,22 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>filter_ArrayByPredicate</string>
+	<string>rj_class_create</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSPredicate *predicate = [NSPredicate predicateWithFormat:@"selected == %d",YES];
-    &lt;#Array#&gt; = [&lt;#checkArray#&gt; filteredArrayUsingPredicate:predicate];</string>
+	<string>@interface &lt;#Model#&gt;:NSObject
+
+@end
+
+@implementation &lt;#Model#&gt;
+
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E6224189-4EAA-42FC-968F-0D9EBC1D8769</string>
+	<string>0F30CC4A-3209-4D77-8B61-E7650EEADE31</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>predicate</string>
+	<string>在.m文件中新建一个类</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>查找数组中符合条件的item,返回数组</string>
+	<string>rj_class_create</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

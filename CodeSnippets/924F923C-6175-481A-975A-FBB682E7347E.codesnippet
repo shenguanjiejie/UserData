@@ -10,12 +10,13 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>@try {
-            @autoreleasepool {
-                return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-            }
-        }@catch (NSException* exception){
-            DDLog(@"!!!捕获到了异常!!!:Exception=%@\nStack Trace:%@,reason:%@,name:%@", exception, [exception callStackSymbols],[exception reason],[exception name]);
-        }</string>
+    @autoreleasepool {
+    &lt;#[self removeObserver:self forKeyPath:@"text" context:nil];#&gt;
+    }
+}@catch (NSException* exception){
+    DDDLog(@"!!!😱😱😱😱😱😱😱😱捕获到了异常!!!:Exception=%@\nStack Trace:%@,reason:%@,name:%@", exception, [exception callStackSymbols],[exception reason],[exception name]);
+}@finally{
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>924F923C-6175-481A-975A-FBB682E7347E</string>
 	<key>IDECodeSnippetLanguage</key>

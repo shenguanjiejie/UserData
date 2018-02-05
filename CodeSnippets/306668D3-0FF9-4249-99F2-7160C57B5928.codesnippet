@@ -3,22 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>filter_ArrayByPredicate</string>
+	<string>for_rj</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSPredicate *predicate = [NSPredicate predicateWithFormat:@"selected == %d",YES];
-    &lt;#Array#&gt; = [&lt;#checkArray#&gt; filteredArrayUsingPredicate:predicate];</string>
+	<string>for (NSInteger i = 0; i &lt; &lt;#30#&gt;; i++) {
+            &lt;#statements#&gt;
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E6224189-4EAA-42FC-968F-0D9EBC1D8769</string>
+	<string>306668D3-0FF9-4249-99F2-7160C57B5928</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>predicate</string>
+	<string>for循环简写</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>查找数组中符合条件的item,返回数组</string>
+	<string>forCycle</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
