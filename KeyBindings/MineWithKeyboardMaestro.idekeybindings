@@ -475,6 +475,8 @@
 				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>^$@J</string>
 				<key>Navigation</key>
 				<string>NO</string>
 				<key>Title</key>
@@ -949,6 +951,8 @@
 			<string>complete:</string>
 			<key>@'</key>
 			<string>deleteBackward:</string>
+			<key>@h</key>
+			<string>moveUp:</string>
 			<key>@</key>
 			<string>moveToEndOfLine:</string>
 			<key>^$@D</key>
@@ -957,10 +961,14 @@
 			<string>selectParagraph:</string>
 			<key>^h</key>
 			<string>deleteBackward:</string>
+			<key>^p</key>
+			<string>moveUp:</string>
 			<key>^~$@D</key>
 			<string>deleteLine:</string>
 			<key></key>
 			<string>deleteBackward:</string>
+			<key></key>
+			<string>moveUp:</string>
 		</dict>
 		<key>Version</key>
 		<integer>3</integer>
