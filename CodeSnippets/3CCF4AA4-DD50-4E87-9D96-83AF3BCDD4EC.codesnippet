@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sjvideoHelperConfig</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.videoHelper.vc_viewWillAppearExeBlock();
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.videoHelper.vc_viewWillDisappearExeBlock();
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.videoHelper.vc_viewDidDisappearExeBlock();
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return self.videoHelper.vc_prefersStatusBarHiddenExeBlock();
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return self.videoHelper.vc_preferredStatusBarStyleExeBlock();
+}
+
+- (SJVideoPlayerHelper *)videoHelper{
+    if (!_videoHelper) {
+        _videoHelper = [[SJVideoPlayerHelper alloc] initWithViewController:self];
+    }
+    return _videoHelper;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3CCF4AA4-DD50-4E87-9D96-83AF3BCDD4EC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>SJVideoHelper控制器中的配置</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>SJVideoHelperConfig</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>HCSStarRatingView_init</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>_rateView = [[HCSStarRatingView alloc] init];
+        _rateView.translatesAutoresizingMaskIntoConstraints = NO;
+        _rateView.userInteractionEnabled = NO;
+        _rateView.starBorderColor = [UIColor clearColor];
+        _rateView.emptyStarColor = kLightGrayColor;
+        _rateView.spacing = 1;
+        _rateView.allowsHalfStars = YES;
+        _rateView.emptyStarImage = kImageNamed(MainStoreListEmtyStar);
+        _rateView.filledStarImage = kImageNamed(MainStoreListFullStar);
+        [contentView addSubview:_rateView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3682A5DF-06D2-4D5F-9941-A03924A7358E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>HCSStarRatingView初始化</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>HCSStarRatingViewInit</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>TYTabPagerControllerSettings</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+self.tabBarHeight = 44;
+self.tabBar.layout.normalTextColor = kBlackColor;
+self.tabBar.layout.normalTextFont = kSystemFontSize(16);
+self.tabBar.layout.selectedTextColor = kGreenColor;
+self.tabBar.layout.selectedTextFont = kSystemFontSize(18);
+self.tabBar.layout.barStyle = TYPagerBarStyleNoneView;
+//    self.tabBar.layout.cellWidth = kScreenWidth/5;
+self.tabBar.layout.cellSpacing = 0;
+self.tabBar.layout.cellEdging = 0;
+self.tabBar.layout.adjustContentCellsCenter = YES;
+self.dataSource = self;
+self.delegate = self;
+self.pagerController.scrollView.scrollEnabled = NO;
+[self loadData];
+
+- (void)loadData {
+    [self.tabBar reloadData];
+    [self.pagerController reloadData];
+}
+
+- (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    self.tabBar.frame = CGRectMake(0, 64, kScreenWidth, 44);
+    self.pagerController.view.frame = CGRectMake(0, 108, kScreenWidth, kScreenHeight - 108);
+}
+
+#pragma mark - TYTabPagerControllerDataSource
+
+- (NSInteger)numberOfControllersInTabPagerController {
+    return 2;
+}
+
+- (UIViewController *)tabPagerController:(TYTabPagerController *)tabPagerController controllerForIndex:(NSInteger)index prefetching:(BOOL)prefetching {
+    &lt;#VC#&gt; *VC = [[&lt;#VC#&gt; alloc] init];
+    
+    return VC;
+}
+
+- (NSString *)tabPagerController:(TYTabPagerController *)tabPagerController titleForIndex:(NSInteger)index {
+    return nil;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F7DB00F5-53F9-4689-96DD-228288CF5C36</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>继承自TYTabPagerController之后的配置</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TYTabPagerControllerSettings</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

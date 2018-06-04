@@ -9,7 +9,7 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    &lt;#type#&gt;(^&lt;#name#&gt;)(&lt;#type#&gt;) =  ^(&lt;#type#&gt; &lt;#variate#&gt;){
+	<string>&lt;#returnType#&gt;(^&lt;#name#&gt;)(&lt;#type#&gt;) =  ^&lt;#returnType#&gt;(&lt;#type#&gt; &lt;#variate#&gt;){
         &lt;#code#&gt;
     };</string>
 	<key>IDECodeSnippetIdentifier</key>

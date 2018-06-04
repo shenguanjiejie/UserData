@@ -3,29 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>init_cell</string>
+	<string>signal_dispatch</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        UIView *contentView = self.contentView;
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-    }
-    return self;
-}</string>
+	<string>dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_semaphore_signal(semaphore);
+    dispatch_semaphore_wait(semaphore, 5);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>70EF8FFB-27A5-4271-9079-168E15320153</string>
+	<string>D85235E0-75C9-4E90-A06B-FCE64C8421B7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UITableViewCell的初始化方法</string>
+	<string>signal_dispatch</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>init_cell</string>
+	<string>等待block执行</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -18,7 +18,11 @@ NSString *url = baseUrlWithPath(@"&lt;##&gt;");
 
 [RJAFNTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
     
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 } failure:^(NSError *error) {
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>26484022-BE45-4EF1-BF78-363C2D3B5DC8</string>

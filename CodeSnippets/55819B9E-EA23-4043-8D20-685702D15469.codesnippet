@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pay</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - 微信支付
+-(void)wechatPay:(NSDictionary *)obj orderId:(NSInteger)orderId{
+    PayReq * request = [[PayReq alloc] init];
+    request.timeStamp = [obj[@"timestamp"] intValue];
+    request.partnerId = @"1490607612";
+    request.nonceStr = obj[@"noncestr"];
+    request.prepayId = obj[@"prepayid"];
+    request.package =  @"Sign=WXPay";
+    request.sign = obj[@"sign"];
+    [WXApi sendReq:request];
+    
+    AppDelegate * appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.weChatPayBlock = ^(int result) {
+        //        WXSuccess           = 0,    /**&lt; 成功    */
+        //        WXErrCodeCommon     = -1,   /**&lt; 普通错误类型    */
+        //        WXErrCodeUserCancel = -2,   /**&lt; 用户点击取消并返回    */
+        //        WXErrCodeSentFail   = -3,   /**&lt; 发送失败    */
+        //        WXErrCodeAuthDeny   = -4,   /**&lt; 授权失败    */
+        //        WXErrCodeUnsupport  = -5,   /**&lt; 微信不支持    */
+        switch (result) {
+            case WXSuccess:
+            {
+                
+                break;
+            }
+            default:
+                DDDLog(@"支付失败");
+                break;
+        }
+    };
+}
+
+#pragma mark - 支付宝支付
+-(void)aliPay:(NSString *)aliPayString orderID:(NSInteger)orderID{
+    NSString *appScheme = [[NSBundle mainBundle] bundleIdentifier];
+    [[AlipaySDK defaultService] payOrder:aliPayString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
+        //        9000    订单支付成功
+        //        8000    正在处理中，支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态
+        //        4000    订单支付失败
+        //        5000    重复请求
+        //        6001    用户中途取消
+        //        6002    网络连接出错
+        //        6004    支付结果未知（有可能已经支付成功），请查询商户订单列表中订单的支付状态
+        //        其它    其它支付错误
+        
+        switch ([resultDic[@"resultStatus"] intValue]) {
+            case 9000:
+            {
+                DDDLog(@"处理支付成功操作");
+            }
+                break;
+            default:
+                break;
+        }
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>55819B9E-EA23-4043-8D20-685702D15469</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>微信支付宝支付</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>pay</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

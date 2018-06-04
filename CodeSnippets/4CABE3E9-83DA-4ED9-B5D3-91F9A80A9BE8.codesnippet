@@ -50,6 +50,8 @@
     [RJAFNTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
         [self showJson:json];
     } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     }];
 }
 

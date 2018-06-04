@@ -3,29 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>init_cell</string>
+	<string>LYWKWebViewControllerInit</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        UIView *contentView = self.contentView;
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-    }
-    return self;
-}</string>
+	<string>        LYWKWebViewController *webVC = [[LYWKWebViewController alloc] initWithAddress:&lt;#url#&gt;];
+        webVC.showsToolBar = YES;
+        webVC.allowsLinkPreview = YES;
+        UINavigationController *webNav = [[UINavigationController alloc] initWithRootViewController:webVC];
+        webVC.navigationType = LYWebViewControllerNavigationToolItem;;
+        [self.navigationController pushViewController:webNav animated:YES];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>70EF8FFB-27A5-4271-9079-168E15320153</string>
+	<string>4FF2FEDF-CB0E-4650-BB8C-857A4D351199</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>UITableViewCell的初始化方法</string>
+	<string>LYWKWebViewController初始化</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>init_cell</string>
+	<string>LYWKWebViewControllerInit</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -16,14 +16,30 @@ layout.minimumLineSpacing = 0.0;
 layout.minimumInteritemSpacing = 0.0;
 _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
 _collectionView.translatesAutoresizingMaskIntoConstraints = NO;
-_collectionView.pagingEnabled = YES;
+_collectionView.pagingEnabled = NO;
 _collectionView.backgroundColor = [UIColor clearColor];
 _collectionView.showsHorizontalScrollIndicator = NO;
 _collectionView.showsVerticalScrollIndicator = NO;
-[_collectionView registerClass:[RJPageCell class] forCellWithReuseIdentifier:@"Cell"];
+[_collectionView registerClass:[&lt;#RJPageCell#&gt; class] forCellWithReuseIdentifier:[&lt;#RJPageCell#&gt; className]];
 _collectionView.delegate = self;
 _collectionView.dataSource = self;
 [self.view addSubview:_collectionView];
+
+[self.view addHAlignConstraintToView:_collectionView constant:0];
+[self.view addBottomAlignConstraintToView:_collectionView constant:0];
+[&lt;#navView#&gt; addTopConstraintToView:_collectionView constant:0];
+
+@weakify(self)
+_collectionView.mj_header = [MJRefreshNormalHeader   headerWithRefreshingBlock:^{
+    @strongify(self)
+    self.pageIndex = 1;
+    [self reloadData];
+}];
+
+_collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    @strongify(self)
+    [self reloadData];
+}];
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4886FAAF-2F18-4145-9578-54011D698274</string>

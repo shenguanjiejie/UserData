@@ -23,8 +23,7 @@
 
 //每个UICollectionView展示的内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * CellIdentifier = @"Cell";
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[&lt;#RJPageCell#&gt; className] forIndexPath:indexPath];
     
     return cell;
 }
@@ -45,7 +44,6 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
 }
 
 //返回这个UICollectionView是否可以被选择
@@ -59,7 +57,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>CollectionView七件套</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>CollectionView七件套</string>
+	<string>mmCollectionView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
