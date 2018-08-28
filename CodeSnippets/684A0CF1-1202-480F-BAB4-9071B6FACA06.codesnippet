@@ -3,23 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>signal_dispatch</string>
+	<string>rj_tableView三件套</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    dispatch_semaphore_signal(semaphore);
-    dispatch_semaphore_wait(semaphore, dispatch_time_delay(2));</string>
+	<string>- (NSInteger)numberOfSectionsInRJTableView:(RJTableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)rj_tableView:(RJTableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (RJBaseCellInfo *)rj_tableView:(RJTableView *)tableView infoForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D85235E0-75C9-4E90-A06B-FCE64C8421B7</string>
+	<string>684A0CF1-1202-480F-BAB4-9071B6FACA06</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>signal_dispatch</string>
+	<string>RJTableViewDataSource代理方法</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>等待block执行</string>
+	<string>RJTableViewDataSource代理方法</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

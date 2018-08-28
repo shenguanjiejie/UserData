@@ -23,6 +23,8 @@ _collectionView.showsVerticalScrollIndicator = NO;
 [_collectionView registerClass:[&lt;#RJPageCell#&gt; class] forCellWithReuseIdentifier:[&lt;#RJPageCell#&gt; className]];
 _collectionView.delegate = self;
 _collectionView.dataSource = self;
+_collectionView.emptyDataSetSource = self;
+_collectionView.emptyDataSetDelegate = self;
 [self.view addSubview:_collectionView];
 
 [self.view addHAlignConstraintToView:_collectionView constant:0];

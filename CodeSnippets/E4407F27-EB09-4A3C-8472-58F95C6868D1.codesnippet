@@ -9,7 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;TYTabPagerControllerDataSource,TYTabPagerControllerDelegate&gt;
+	<string>#import &lt;TYTabPagerController.h&gt;
+&lt;TYTabPagerControllerDataSource,TYTabPagerControllerDelegate&gt;
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
@@ -47,27 +48,31 @@
 #pragma mark - setViews
 - (void)setViews{
     self.tabBarHeight = 44;
-    self.tabBar.layout.normalTextColor = kBlackColor;
-    self.tabBar.layout.normalTextFont = kSystemFontSize(16);
-    self.tabBar.layout.selectedTextColor = kGreenColor;
-    self.tabBar.layout.selectedTextFont = kSystemFontSize(18);
-    self.tabBar.layout.barStyle = TYPagerBarStyleNoneView;
+    self.tabBar.layout.normalTextColor = kGrayColor;
+    self.tabBar.layout.normalTextFont = kSystemFontSize(12);
+    self.tabBar.layout.selectedTextColor = [UIColor whiteColor];
+    self.tabBar.layout.selectedTextFont = kSystemFontSize(12);
+    self.tabBar.layout.barStyle = TYPagerBarStyleCoverView;
     //    self.tabBar.layout.cellWidth = kScreenWidth/5;
     self.tabBar.layout.cellSpacing = 0;
-    self.tabBar.layout.cellEdging = 0;
+    self.tabBar.layout.cellEdging = 20;
+    self.tabBar.layout.progressVerEdging = 10;
+    self.tabBar.layout.progressHorEdging = 15;
+    
+    self.tabBar.layout.progressColor = kGreenColor;
     self.tabBar.layout.adjustContentCellsCenter = YES;
     self.dataSource = self;
     self.delegate = self;
     self.pagerController.scrollView.scrollEnabled = NO;
     
-//    self.tabBar.frame = CGRectMake(0, 64, kScreenWidth, 44);
-//    self.pagerController.view.frame = CGRectMake(0, 108, kScreenWidth, kScreenHeight - 108);
-[self.navigationBarView addTopConstraintToView:self.pagerController.view constant:0];
-[self.view addHAlignConstraintToViews:@[self.tabBar,self.pagerController.view] constant:0];
-[self.tabBar setHeightConstraintWithConstant:44];
-//    [self.tabBar addBottomConstraintToView:self.tabBarController.view constant:0];
-[self.view addBottomAlignConstraintToView:self.pagerController.view constant:44];
-[self.view addBottomAlignConstraintToView:self.tabBar constant:0];
+    [self.view addTopAlignConstraintToView:self.tabBar constant:StatusBarH];
+    [self.view addHAlignConstraintToView:self.tabBar constant:70];
+    [self.tabBar setHeightConstraintWithConstant:44];
+    
+    [self.view addHAlignConstraintToView:self.pagerController.view constant:0];
+    [self.view addBottomAlignConstraintToView:self.pagerController.view constant:0];
+    [self.navigationBarView addTopConstraintToView:self.pagerController.view constant:0];
+    [self.view bringSubviewToFront:self.tabBar];
 }
 
 #pragma mark - Event Response

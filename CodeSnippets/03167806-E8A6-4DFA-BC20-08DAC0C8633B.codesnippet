@@ -49,6 +49,23 @@
 //返回这个UICollectionView是否可以被选择
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
+}
+
+#pragma mark - DZNEmptyDelegate
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
+    return kEmptyDataImage;
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView{
+    return kEmptyDataTitle(&lt;#title#&gt;);
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView{
+    return YES;
+}
+
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView{
+    return [UIColor clearColor];
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>03167806-E8A6-4DFA-BC20-08DAC0C8633B</string>

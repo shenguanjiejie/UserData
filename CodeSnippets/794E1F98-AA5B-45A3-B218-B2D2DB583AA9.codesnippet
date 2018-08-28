@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>RJScrollDirection</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>typedef void (^CollectioDidScrollBlock)(UIScrollView *collectionView,RJDirection direction);
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    //    NSLog(@"velocity:%@",NSStringFromCGPoint(velocity));
+    //    NSLog(@"targetContentOffset:%@",NSStringFromCGPoint(*targetContentOffset));
+    //强制设置scrollView的偏移量
+    //*targetContentOffset = CGPointMake(0, 200);
+    if (self.collectioDidScrollBlock) {
+        if (targetContentOffset-&gt;y &gt; _contentOffsetY) {
+            self.collectioDidScrollBlock(scrollView,RJDirectionBottom);
+        }else{
+            self.collectioDidScrollBlock(scrollView,RJDirectionTop);
+        }
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    _contentOffsetY = scrollView.contentOffset.y;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>794E1F98-AA5B-45A3-B218-B2D2DB583AA9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>监听scrollView的滚动方向</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>RJScrollDirection</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

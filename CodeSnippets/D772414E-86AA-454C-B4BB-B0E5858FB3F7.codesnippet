@@ -3,52 +3,47 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>TYTabPagerControllerSettings</string>
+	<string>TYTabPagerController 的下划线样式设置</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>
-	self.tabBarHeight = 44;
-    self.tabBar.layout.normalTextColor = kGrayColor;
-    self.tabBar.layout.normalTextFont = kSystemFontSize(12);
-    self.tabBar.layout.selectedTextColor = [UIColor whiteColor];
-    self.tabBar.layout.selectedTextFont = kSystemFontSize(12);
-    self.tabBar.layout.barStyle = TYPagerBarStyleCoverView;
+	<string>    self.tabBarHeight = 44;
+    self.tabBar.layout.normalTextColor = kBlackColor;
+    self.tabBar.layout.normalTextFont = kSystemFontSize(16);
+    self.tabBar.layout.selectedTextColor = kGreenColor;
+    self.tabBar.layout.selectedTextFont = kSystemFontSize(16);
+    self.tabBar.layout.barStyle = TYPagerBarStyleProgressView;
     //    self.tabBar.layout.cellWidth = kScreenWidth/5;
-    self.tabBar.layout.cellSpacing = 0;
-    self.tabBar.layout.cellEdging = 20;
-    self.tabBar.layout.progressVerEdging = 10;
-    self.tabBar.layout.progressHorEdging = 15;
-    
+    self.tabBar.layout.cellSpacing = 20;
+    self.tabBar.layout.cellEdging = 3;
+    //self.tabBar.layout.progressVerEdging = 10;
     self.tabBar.layout.progressColor = kGreenColor;
     self.tabBar.layout.adjustContentCellsCenter = YES;
     self.dataSource = self;
     self.delegate = self;
-    self.pagerController.scrollView.scrollEnabled = NO;
+//    self.pagerController.scrollView.scrollEnabled = NO;
     
     [self.view addTopAlignConstraintToView:self.tabBar constant:StatusBarH];
-    [self.view addHAlignConstraintToView:self.tabBar constant:0];
+    [self.view addHAlignConstraintToView:self.tabBar constant:70];
     [self.tabBar setHeightConstraintWithConstant:44];
     
     [self.view addHAlignConstraintToView:self.pagerController.view constant:0];
     [self.view addBottomAlignConstraintToView:self.pagerController.view constant:0];
-    [self.tabBar addTopAlignConstraintToView:self.pagerController.view constant:0];
-    [self.view bringSubviewToFront:self.tabBar];
-
-</string>
+    [self.navigationBarView addTopConstraintToView:self.pagerController.view constant:0];
+    [self.view bringSubviewToFront:self.tabBar];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F7DB00F5-53F9-4689-96DD-228288CF5C36</string>
+	<string>D772414E-86AA-454C-B4BB-B0E5858FB3F7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>继承自TYTabPagerController之后的配置</string>
+	<string>TYTabPagerControllerLineSettings</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>TYTabPagerControllerSettings</string>
+	<string>TYTabPagerControllerLineSettings</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
