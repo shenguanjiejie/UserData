@@ -25,7 +25,7 @@
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    _contentOffsetY = scrollView.contentOffset.y;
+    _contentOffsetY = scrollView.contentOffset.y&gt;0?:0;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>794E1F98-AA5B-45A3-B218-B2D2DB583AA9</string>
