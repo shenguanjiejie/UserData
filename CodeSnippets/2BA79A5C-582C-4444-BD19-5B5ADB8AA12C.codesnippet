@@ -22,7 +22,7 @@
 
     [self.view addHAlignConstraintToView:_tableView constant:0];
     [self.view addBottomAlignConstraintToView:_tableView constant:0];
-    [&lt;#navView#&gt; addTopConstraintToView:_tableView constant:0];
+    [&lt;#navView#&gt; addBottomConstraintToView:_tableView constant:0];
 
     @weakify(self)
     _tableView.mj_header = [MJRefreshNormalHeader   headerWithRefreshingBlock:^{

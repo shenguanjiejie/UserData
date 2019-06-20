@@ -14,9 +14,9 @@
                          @"&lt;##&gt;":&lt;##&gt;
                          };
 
-NSString *url = baseUrlWithPath(@"&lt;##&gt;");
+NSString *url = urlWithPath(@"&lt;##&gt;");
 
-[RJAFNTool postWithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
+[RJAFNTool &lt;#get#&gt;WithURL:url params:params viewController:self hudText:&lt;#@""#&gt; success:^(id json) {
     
     [self.tableView.mj_header endRefreshing];
     [self.tableView.mj_footer endRefreshing];
