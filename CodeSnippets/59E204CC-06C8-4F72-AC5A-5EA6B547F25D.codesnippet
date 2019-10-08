@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>mark</string>
+	<string>mm_poppush</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>TopLevel</string>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - &lt;#Section#&gt;</string>
+	<string>NSMutableArray *controllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+NSInteger index = [controllers indexOfObject:self];
+[controllers removeObjectsInRange:NSMakeRange(1, index)];
+[controllers addObject:&lt;#VC#&gt;];
+[self.navigationController setViewControllers:controllers animated:YES];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CAEF0221-EE66-4D5B-BC9B-A7333799D2B8</string>
+	<string>59E204CC-06C8-4F72-AC5A-5EA6B547F25D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>#pragma mark -</string>
+	<string>mm_poppush</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>#pragma mark -</string>
+	<string>mm_poppush</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

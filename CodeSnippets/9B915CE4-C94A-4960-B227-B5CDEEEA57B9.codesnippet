@@ -17,7 +17,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary&lt;NSKeyValueChangeKey,id&gt; *)change context:(void *)context{
     
-    &lt;#BOOL isHidden#&gt; = [change objectForKey:NSKeyValueChangeNewKey];
+    &lt;#BOOL isHidden#&gt; = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
     
     if ([keyPath isEqualToString:@"&lt;#iconBtn.hidden#&gt;"]) {
         &lt;##&gt;

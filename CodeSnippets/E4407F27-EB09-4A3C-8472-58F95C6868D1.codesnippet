@@ -105,7 +105,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>继承自TYPagerController的基本设置</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>classMarks TYPagerController</string>
+	<string>classMarksPager</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>classMarksPagerVC</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import &lt;TYTabPagerController.h&gt;
+
+@interface &lt;#SGERecordsMainVC#&gt; ()&lt;TYTabPagerBarDataSource,TYTabPagerBarDelegate,TYPagerControllerDataSource,TYPagerControllerDelegate&gt;
+
+@property (nonatomic, strong) NSArray&lt;NSString *&gt; *pageNames;
+@property (nonatomic, strong, readonly) TYTabPagerBar *tabBar;
+@property (nonatomic, strong) TYPagerController *pagerController;
+
+@end
+
+@implementation &lt;#SGERecordsMainVC#&gt;
+
+#pragma mark - Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setNavigationBarViewWithBackMsg:nil backSelector:@selector(back)];
+    self.title = @"";
+    self.view.backgroundColor = kBackgroundColor;
+    
+    //初始化参数
+    [self variableInit];
+    
+    //设置Views
+    [self setViews];
+    
+    //获取数据
+    [self getData];
+}
+
+
+-(void)variableInit{
+    _pageNames = @[@"新客户接待",@"老客户跟进"];
+}
+
+#pragma mark - Data
+
+- (void)getData{
+    [self.tabBar reloadData];
+    [self.pagerController reloadData];
+}
+
+
+#pragma mark - setViews
+- (void)setViews{
+    
+    /**RJ 2019-06-27 19:42:24 tabbar&amp;pagerController*/
+//    self.tabbar.tabBarHeight = 44;
+    _tabBar = [[TYTabPagerBar alloc]init];
+    self.tabBar.delegate = self;
+    self.tabBar.dataSource = self;
+    self.tabBar.layout.normalTextColor = kHexColor(CCD1FF);
+    self.tabBar.layout.normalTextFont = kFontSize(16);
+    self.tabBar.layout.selectedTextColor = [UIColor whiteColor];
+    self.tabBar.layout.selectedTextFont = kFontSize(18);
+//    self.tabBar.layout.barStyle = TYPagerBarStyleCoverView;
+    self.tabBar.layout.barStyle = TYPagerBarStyleProgressView;
+    //    self.tabBar.layout.cellWidth = kScreenWidth/5;
+    self.tabBar.layout.cellSpacing = 0;
+    self.tabBar.layout.cellEdging = 0;
+    self.tabBar.layout.progressHeight = 1;
+//    self.tabBar.layout.progressVerEdging = 5;
+//    self.tabBar.layout.progressColor = kHexColor(BBC1ED);
+    self.tabBar.layout.progressColor = [UIColor whiteColor];
+//    self.tabBar.layout.progressVerEdging = 10;
+    self.tabBar.layout.progressHorEdging = 32;
+//    self.tabBar.layout.adjustContentCellsCenter = YES;
+    [self.tabBar registerClass:[TYTabPagerBarCell class] forCellWithReuseIdentifier:[TYTabPagerBarCell className]];
+    [self.view addSubview:_tabBar];
+    
+    self.pagerController = [[TYPagerController alloc]init];
+    self.pagerController.view.backgroundColor = [UIColor clearColor];
+    self.pagerController.dataSource = self;
+    self.pagerController.delegate = self;
+//    self.pagerController.scrollView.scrollEnabled = NO;
+    self.pagerController.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addChildViewController:self.pagerController];
+    [self.view addSubview:_pagerController.view];
+    
+    /**RJ 2019-08-08 16:32:39 tabBar&amp;pagerController.view layout*/
+    [self.navigationBarView addBottomConstraintToView:self.tabBar constant:20];
+    [self.view addHAlignConstraintToView:self.tabBar constant:10];
+    [self.tabBar addHeightConstraintWithConstant:44];
+    
+    [self.view addHAlignConstraintToView:self.pagerController.view constant:0];
+    [self.view addBottomAlignConstraintToView:self.pagerController.view constant:0];
+    [self.tabBar addBottomConstraintToView:self.pagerController.view constant:0];
+    [self.view bringSubviewToFront:self.tabBar];
+}
+
+
+#pragma mark - Event Response
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - TYTabPagerBarDataSource &amp; TYTabPagerBarDelegate
+
+- (NSInteger)numberOfItemsInPagerTabBar {
+    return self.pageNames.count;
+}
+
+- (UICollectionViewCell&lt;TYTabPagerBarCellProtocol&gt; *)pagerTabBar:(TYTabPagerBar *)pagerTabBar cellForItemAtIndex:(NSInteger)index{
+    UICollectionViewCell&lt;TYTabPagerBarCellProtocol&gt; *cell = [pagerTabBar dequeueReusableCellWithReuseIdentifier:[TYTabPagerBarCell className] forIndex:index];
+    cell.titleLabel.text = _pageNames[index];
+    return cell;
+}
+
+- (CGFloat)pagerTabBar:(TYTabPagerBar *)pagerTabBar widthForItemAtIndex:(NSInteger)index{
+    return 110;
+}
+
+- (void)pagerTabBar:(TYTabPagerBar *)pagerTabBar didSelectItemAtIndex:(NSInteger)index{
+    [self.pagerController scrollToControllerAtIndex:index animate:YES];
+}
+
+#pragma mark - TYPagerControllerDataSource
+
+- (NSInteger)numberOfControllersInPagerController {
+    return _pageNames.count;
+}
+
+- (UIViewController *)pagerController:(TYPagerController *)pagerController controllerForIndex:(NSInteger)index prefetching:(BOOL)prefetching {
+    
+    if (index == 0) {
+        SGENewPersonListVC *vc = [[SGENewPersonListVC alloc] init];
+        return vc;
+    }else if (index == 1){
+        SGEOldPersonListVC *vc = [[SGEOldPersonListVC alloc] init];
+        return vc;
+    }
+    
+    return nil;
+}
+
+#pragma mark - TYPagerControllerDelegate
+
+- (void)pagerController:(TYPagerController *)pagerController transitionFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex animated:(BOOL)animated {
+    [_tabBar scrollToItemFromIndex:fromIndex toIndex:toIndex animate:YES];
+}
+
+-(void)pagerController:(TYPagerController *)pagerController transitionFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex progress:(CGFloat)progress {
+    [_tabBar scrollToItemFromIndex:fromIndex toIndex:toIndex progress:progress];
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0C3A9467-0C77-426B-BB33-0716C7940FD4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>不继承的pagerVC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>classMarksPagerVC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

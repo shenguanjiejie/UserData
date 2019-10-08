@@ -73,6 +73,8 @@
     
 }
 
+#pragma mark - Network
+
 #pragma mark - setViews
 - (void)setViews{
 
@@ -83,8 +85,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark - Private Methods
-#pragma mark - Public Methods</string>
+#pragma mark - Others</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4CABE3E9-83DA-4ED9-B5D3-91F9A80A9BE8</string>
 	<key>IDECodeSnippetLanguage</key>
